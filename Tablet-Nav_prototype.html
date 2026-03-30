@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=1400, initial-scale=1.0">
   <title>Tablet Nav Prototype — SafetyCulture</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -185,9 +185,57 @@
     /* Action list item */
     .action-item { padding: 12px 16px; border-bottom: 1px solid #e9edf6; }
     .action-item.selected { background: #ECEDFE; }
+
+    /* iPad 11" Device Mockup */
+    body.mockup-mode {
+      background: #e0e0e0;
+      overflow: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 40px;
+    }
+    .ipad-frame {
+      width: 1254px;
+      height: 914px;
+      background: #1a1a1a;
+      border-radius: 36px;
+      padding: 40px 30px;
+      box-shadow:
+        0 0 0 2px #333,
+        0 40px 100px rgba(0,0,0,0.4),
+        0 10px 40px rgba(0,0,0,0.3),
+        inset 0 0 0 1px rgba(255,255,255,0.05);
+      position: relative;
+      flex-shrink: 0;
+    }
+    .ipad-frame::before {
+      content: '';
+      position: absolute;
+      top: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 8px;
+      height: 8px;
+      background: #2a2a2a;
+      border-radius: 50%;
+      border: 1px solid #333;
+    }
+    .ipad-screen {
+      width: 1194px;
+      height: 834px;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      background: #F8F9FC;
+    }
   </style>
 </head>
-<body class="bg-[#F8F9FC] font-sans text-surface-text overflow-hidden">
+<body class="mockup-mode font-sans text-surface-text">
+
+  <div class="ipad-frame">
+    <div class="ipad-screen">
 
   <!-- iPad Status Bar -->
   <div class="status-bar">
@@ -201,7 +249,7 @@
   </div>
 
   <!-- Main Shell -->
-  <div class="flex h-[calc(100vh-24px)]">
+  <div class="flex" style="height:calc(834px - 24px);">
 
     <!-- Rail Navigation -->
     <nav class="rail-nav flex flex-col items-center py-s6 flex-shrink-0" aria-label="Main navigation">
@@ -1175,7 +1223,10 @@
   </div>
 
   <!-- Popover overlay (click-outside catcher) -->
-  <div id="popoverOverlay" class="fixed inset-0 z-40" style="display:none;"></div>
+  <div id="popoverOverlay" class="absolute inset-0 z-40" style="display:none;"></div>
+
+    </div><!-- /ipad-screen -->
+  </div><!-- /ipad-frame -->
 
   <!-- ============================================================ -->
   <!-- JavaScript -->
