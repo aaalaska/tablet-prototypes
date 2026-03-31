@@ -144,6 +144,52 @@
       transition: background 150ms ease;
     }
 
+    /* iOS Context Menu */
+    .context-menu-backdrop {
+      position: fixed; inset: 0; z-index: 40;
+      background: transparent;
+    }
+    .context-menu {
+      position: absolute; z-index: 50;
+      border-radius: 32px;
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      background: rgba(245, 245, 245, 0.98);
+      box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+      overflow: hidden;
+      transform-origin: top right;
+      opacity: 0;
+      transform: scale(0.92);
+      transition: opacity 180ms ease, transform 180ms ease;
+      pointer-events: none;
+      padding: 4px;
+      width: 220px;
+    }
+    .context-menu.open {
+      opacity: 1;
+      transform: scale(1);
+      pointer-events: auto;
+    }
+    .context-menu-item {
+      display: flex; align-items: center; gap: 8px;
+      padding: 8px 10px 8px 8px;
+      font-family: -apple-system, 'SF Pro Text', 'Noto Sans', sans-serif;
+      font-size: 15px; font-weight: 400; color: #1a1a1a;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: background 120ms ease;
+    }
+    .context-menu-item:hover {
+      background: rgba(0,0,0,0.06);
+    }
+    .context-menu-item .menu-icon {
+      width: 28px; flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+      color: #1a1a1a;
+    }
+    .context-menu-item .menu-icon svg {
+      width: 18px; height: 18px;
+    }
+    .context-menu-item .menu-label { flex: 1; letter-spacing: 0.2px; }
+
     /* iPad 11" Device Mockup */
     body.mockup-mode {
       background: #e0e0e0;
@@ -296,7 +342,7 @@
             <svg class="w-[18px] h-[18px] text-[#404040] flex-shrink-0" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.2931 2.37207C5.96319 2.37207 2.45312 5.88213 2.45312 10.212C2.45312 14.5419 5.96319 18.052 10.2931 18.052C12.0558 18.052 13.6826 17.4702 14.992 16.4883L19.8393 21.3355C20.2298 21.726 20.863 21.726 21.2535 21.3355C21.644 20.945 21.644 20.3118 21.2535 19.9213L16.4271 15.0949C17.4949 13.7554 18.133 12.0582 18.133 10.212C18.133 5.88213 14.6229 2.37207 10.2931 2.37207ZM4.45312 10.212C4.45312 6.9867 7.06776 4.37207 10.2931 4.37207C13.5184 4.37207 16.133 6.9867 16.133 10.212C16.133 13.4373 13.5184 16.052 10.2931 16.052C7.06776 16.052 4.45312 13.4373 4.45312 10.212Z"/></svg>
             <input type="search" placeholder="Search" class="flex-1 text-[17px] font-medium placeholder:text-[#b0b0b0] text-[#404040] outline-none bg-transparent leading-5" style="font-family:'SF Pro Display','SF Pro','system-ui',sans-serif; font-weight:400;">
           </div>
-          <div class="glass h-11 flex items-center gap-[12px] px-[4px]" style="border-radius:296px;">
+          <div id="toolbarGroup" class="glass h-11 flex items-center gap-[12px] px-[4px]" style="border-radius:296px; position:relative;">
             <!-- Filter icon -->
             <div class="w-[36px] h-[36px] flex items-center justify-center rounded-full">
               <svg class="w-[22px] h-[22px] text-[#1f2533]" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16M7 12h10M10 18h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
@@ -305,9 +351,30 @@
             <div class="w-[36px] h-[36px] flex items-center justify-center rounded-full">
               <svg class="w-[22px] h-[22px] text-[#1f2533]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4v16m0 0l-3-3m3 3l3-3M17 20V4m0 0l3 3m-3-3l-3 3"/></svg>
             </div>
-            <!-- List icon -->
-            <div class="w-[36px] h-[36px] flex items-center justify-center rounded-full">
+            <!-- List icon (context menu trigger) -->
+            <div id="viewMenuTrigger" class="w-[36px] h-[36px] flex items-center justify-center rounded-full cursor-pointer">
               <svg class="w-[22px] h-[22px] text-[#1f2533]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="9" y1="6" x2="20" y2="6"/><line x1="9" y1="12" x2="20" y2="12"/><line x1="9" y1="18" x2="20" y2="18"/><circle cx="5" cy="6" r="1" fill="currentColor"/><circle cx="5" cy="12" r="1" fill="currentColor"/><circle cx="5" cy="18" r="1" fill="currentColor"/></svg>
+            </div>
+            <!-- iOS Context Menu -->
+            <div id="viewContextMenu" class="context-menu">
+              <div class="context-menu-item" data-view="list">
+                <div class="menu-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="9" y1="6" x2="20" y2="6"/><line x1="9" y1="12" x2="20" y2="12"/><line x1="9" y1="18" x2="20" y2="18"/><circle cx="5" cy="6" r="1" fill="currentColor"/><circle cx="5" cy="12" r="1" fill="currentColor"/><circle cx="5" cy="18" r="1" fill="currentColor"/></svg>
+                </div>
+                <span class="menu-label">List</span>
+              </div>
+              <div class="context-menu-item" data-view="calendar">
+                <div class="menu-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><rect x="7" y="14" width="3" height="3" rx="0.5"/></svg>
+                </div>
+                <span class="menu-label">Calendar</span>
+              </div>
+              <div class="context-menu-item" data-view="kanban">
+                <div class="menu-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="5" height="18" rx="1"/><rect x="10" y="3" width="5" height="12" rx="1"/><rect x="17" y="3" width="5" height="15" rx="1"/></svg>
+                </div>
+                <span class="menu-label">Kanban</span>
+              </div>
             </div>
           </div>
           <button class="w-11 h-11 rounded-full bg-accent text-white flex items-center justify-center">
@@ -974,6 +1041,59 @@
         touchCard = null;
       });
     });
+  </script>
+
+  <script>
+    // iOS-style Context Menu
+    (function() {
+      const trigger = document.getElementById('viewMenuTrigger');
+      const menu = document.getElementById('viewContextMenu');
+      let backdrop = null;
+
+      function openMenu() {
+        // Position menu below the toolbar group
+        const toolbar = document.getElementById('toolbarGroup');
+        const toolbarRect = toolbar.getBoundingClientRect();
+        const parentRect = toolbar.offsetParent.getBoundingClientRect();
+        menu.style.top = (toolbar.offsetTop - 40) + 'px';
+        menu.style.right = '0px';
+
+        // Create backdrop
+        backdrop = document.createElement('div');
+        backdrop.className = 'context-menu-backdrop';
+        backdrop.addEventListener('click', closeMenu);
+        document.body.appendChild(backdrop);
+
+        // Animate in
+        requestAnimationFrame(() => {
+          menu.classList.add('open');
+        });
+      }
+
+      function closeMenu() {
+        menu.classList.remove('open');
+        if (backdrop && backdrop.parentNode) {
+          backdrop.parentNode.removeChild(backdrop);
+          backdrop = null;
+        }
+      }
+
+      trigger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (menu.classList.contains('open')) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
+      });
+
+      // Menu item clicks
+      menu.querySelectorAll('.context-menu-item').forEach(item => {
+        item.addEventListener('click', () => {
+          closeMenu();
+        });
+      });
+    })();
   </script>
 </body>
 </html>
