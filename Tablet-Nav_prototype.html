@@ -12,23 +12,23 @@
           fontFamily: { sans: ['Noto Sans', 'sans-serif'] },
           colors: {
             accent: {
-              DEFAULT: '#6559ff', hover: '#746BF5', pressed: '#564be7',
-              text: '#4740D4', weak: '#E0E4FF', weakest: '#ECEDFE',
-              border: '#564be7',
-              purple: { DEFAULT: '#675DF4', hover: '#564BE7', pressed: '#4740D4' }
+              DEFAULT: '#4a42c8', hover: '#6e68da', pressed: '#4a42c8',
+              text: '#4a42c8', weak: '#e6e4f8', weakest: '#ecedfe',
+              border: '#4a42c8',
+              purple: { DEFAULT: '#4a42c8', hover: '#4a42c8', pressed: '#4a42c8' }
             },
             surface: {
               bg: '#ffffff',
-              hover: '#f1f3fb',
-              2: '#E9EDF6',
-              text: { DEFAULT: '#1f2533', weak: '#3f495a', weaker: '#545f70', placeholder: '#bfc6d4', disabled: '#828ea0' },
-              border: { DEFAULT: '#bfc6d4', weak: '#dbe0eb', weakest: '#e9edf6' }
+              hover: '#ecedfe',
+              2: '#e9e7e7',
+              text: { DEFAULT: '#1c1714', weak: '#7a7674', weaker: '#7a7674', placeholder: '#d9d6d6', disabled: '#7a7674' },
+              border: { DEFAULT: '#d9d6d6', weak: '#e5e5e5', weakest: '#e9e7e7' }
             },
-            background: { DEFAULT: '#e9edf6', weak: '#f8f9fc' },
-            negative: { DEFAULT: '#c62f35', textOn: '#ffffff' },
-            positive: { DEFAULT: '#00875a' },
-            warning: { DEFAULT: '#f5a623', weak: '#fffbeb', text: '#92400e' },
-            info: { DEFAULT: '#0065FF', weak: '#E6F0FF', text: '#003D99' },
+            background: { DEFAULT: '#e9e7e7', weak: '#f9f8f8' },
+            negative: { DEFAULT: '#b02010', textOn: '#ffffff' },
+            positive: { DEFAULT: '#257c42' },
+            warning: { DEFAULT: '#a86010', weak: '#fdf8f0', text: '#643804' },
+            info: { DEFAULT: '#3060c8', weak: '#deeaff', text: '#3060c8' },
           },
           spacing: { s1:'4px', s2:'8px', s3:'12px', s4:'16px', s5:'20px', s6:'24px', s8:'32px' },
           borderRadius: { xsmall:'4px', small:'8px', medium:'12px', large:'16px', full:'9999px' },
@@ -58,7 +58,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    .focus-ring:focus-visible { outline: none; box-shadow: 0 0 0 4px rgba(101, 89, 255, 0.90), 0 0 0 6px white; }
+    .focus-ring:focus-visible { outline: none; box-shadow: 0 0 0 4px rgba(74, 66, 200, 0.90), 0 0 0 6px white; }
 
     /* -- iPadOS 26 Glass UI System -- */
     .glass {
@@ -94,8 +94,8 @@
     }
     .glass-search:focus-within {
       background: rgba(255, 255, 255, 0.88);
-      box-shadow: 0px 4px 24px 0px rgba(101, 89, 255, 0.12);
-      border-color: rgba(101, 89, 255, 0.3);
+      box-shadow: 0px 4px 24px 0px rgba(74, 66, 200, 0.12);
+      border-color: rgba(74, 66, 200, 0.3);
     }
     .glass-rect {
       position: relative;
@@ -119,14 +119,14 @@
       -webkit-backdrop-filter: blur(20px);
       border: 0.5px solid rgba(255, 255, 255, 0.6);
     }
-    .rail-item.active .rail-icon-box svg { color: #675DF4; }
+    .rail-item.active .rail-icon-box svg { color: #4a42c8; }
     .rail-item .icon-filled { display: none; }
     .rail-item.active .icon-filled { display: block; }
     .rail-item.active .icon-outline { display: none; }
-    .rail-item-label { font-size: 12px; line-height: 16px; font-weight: 500; color: #3f495a; }
+    .rail-item-label { font-size: 12px; line-height: 16px; font-weight: 500; color: #7a7674; }
 
     /* Status bar (iPad style) */
-    .status-bar { height: 24px; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; font-size: 12px; font-weight: 600; color: #1f2533; }
+    .status-bar { height: 24px; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; font-size: 12px; font-weight: 600; color: #1c1714; }
 
     /* Horizontal scroll */
     .scroll-row { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
@@ -164,29 +164,29 @@
       font-weight: 500;
       cursor: pointer;
       transition: all 150ms;
-      color: #404040;
+      color: #1c1714;
     }
     .tab-pill.active {
-      background: #ededed;
-      color: #4740D4;
+      background: #e9e7e7;
+      color: #4a42c8;
       font-weight: 500;
     }
 
     /* Badge styles */
     .badge { display: inline-flex; align-items: center; padding: 2px 8px; border-radius: 9999px; font-size: 12px; line-height: 16px; font-weight: 500; }
-    .badge-info { background: #E6F0FF; color: #003D99; }
-    .badge-positive { background: #E3FCEF; color: #006644; }
-    .badge-warning { background: #FFFBEB; color: #92400e; }
-    .badge-negative { background: #FFEBE6; color: #BF2600; }
-    .badge-neutral { background: #F1F3FB; color: #545f70; }
+    .badge-info { background: #deeaff; color: #3060c8; }
+    .badge-positive { background: #d0e9d8; color: #257c42; }
+    .badge-warning { background: #fdf8f0; color: #643804; }
+    .badge-negative { background: #f9d8d0; color: #b02010; }
+    .badge-neutral { background: #e9e7e7; color: #7a7674; }
 
     /* Action list item */
-    .action-item { padding: 12px 16px; border-bottom: 1px solid #e9edf6; }
-    .action-item.selected { background: #ECEDFE; }
+    .action-item { padding: 12px 16px; border-bottom: 1px solid #e9e7e7; }
+    .action-item.selected { background: #ecedfe; }
 
     /* iPad 11" Device Mockup */
     body.mockup-mode {
-      background: #e0e0e0;
+      background: #d9d6d6;
       overflow: auto;
       display: flex;
       align-items: center;
@@ -197,11 +197,11 @@
     .ipad-frame {
       width: 1254px;
       height: 914px;
-      background: #1a1a1a;
+      background: #1c1714;
       border-radius: 36px;
       padding: 40px 30px;
       box-shadow:
-        0 0 0 2px #333,
+        0 0 0 2px #1c1714,
         0 40px 100px rgba(0,0,0,0.4),
         0 10px 40px rgba(0,0,0,0.3),
         inset 0 0 0 1px rgba(255,255,255,0.05);
@@ -216,9 +216,9 @@
       transform: translateX(-50%);
       width: 8px;
       height: 8px;
-      background: #2a2a2a;
+      background: #1c1714;
       border-radius: 50%;
-      border: 1px solid #333;
+      border: 1px solid #1c1714;
     }
     .ipad-screen {
       width: 1194px;
@@ -226,7 +226,7 @@
       border-radius: 12px;
       overflow: hidden;
       position: relative;
-      background: #F8F9FC;
+      background: #f9f8f8;
     }
   </style>
 </head>
@@ -255,8 +255,8 @@
       <div class="mb-s4">
         <button id="orgThumbnail" class="focus-ring w-10 h-10 rounded-[10px] overflow-hidden cursor-pointer" aria-label="Switch organization">
           <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=80&h=80&fit=crop&crop=center" alt="Crestwood" class="w-10 h-10 rounded-[10px] object-cover" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-          <div class="w-10 h-10 rounded-[10px] bg-[#1a3a2a] flex-col items-center justify-center overflow-hidden" style="display:none">
-            <svg class="w-5 h-5 text-[#c8e6d8]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L4 14h5v8h6v-8h5L12 2z"/></svg>
+          <div class="w-10 h-10 rounded-[10px] bg-[#144524] flex-col items-center justify-center overflow-hidden" style="display:none">
+            <svg class="w-5 h-5 text-[#d0e9d8]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L4 14h5v8h6v-8h5L12 2z"/></svg>
           </div>
         </button>
       </div>
@@ -304,16 +304,16 @@
       <div class="flex flex-col items-center gap-s3 mt-auto">
         <!-- sparkle-filled icon (AI) -->
         <button class="focus-ring glass w-11 h-11 flex items-center justify-center" aria-label="AI Assistant">
-          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" aria-hidden="true"><defs><linearGradient id="sparkle-grad" gradientUnits="userSpaceOnUse" x1="1" y1="1" x2="23" y2="23"><stop offset="0%" stop-color="#EA006D"/><stop offset="52%" stop-color="#7419DC"/><stop offset="100%" stop-color="#00D1FF"/></linearGradient></defs><path d="M15.8762 2.55128C15.7595 2.24784 15.468 2.04762 15.1429 2.04762C14.8177 2.04762 14.5262 2.24784 14.4095 2.55128L13.0469 6.09396C12.8109 6.70763 12.7367 6.88448 12.6353 7.02715C12.5335 7.17032 12.4084 7.2954 12.2652 7.3972C12.1226 7.49865 11.9457 7.57282 11.332 7.80885L7.78937 9.17142C7.48594 9.28813 7.28571 9.57966 7.28571 9.90476C7.28571 10.2299 7.48594 10.5214 7.78937 10.6381L11.3321 12.0007C11.9457 12.2367 12.1226 12.3109 12.2652 12.4123C12.4084 12.5141 12.5335 12.6392 12.6353 12.7824C12.7367 12.925 12.8109 13.1019 13.0469 13.7156L14.4095 17.2582C14.5262 17.5617 14.8178 17.7619 15.1429 17.7619C15.468 17.7619 15.7595 17.5617 15.8762 17.2582L17.2388 13.7156C17.4748 13.1019 17.549 12.925 17.6504 12.7824C17.7522 12.6392 17.8773 12.5141 18.0205 12.4123C18.1631 12.3109 18.34 12.2367 18.9537 12.0007L22.4963 10.6381C22.7998 10.5214 23 10.2299 23 9.90476C23 9.57966 22.7998 9.28813 22.4963 9.17142L18.9537 7.80885C18.34 7.57282 18.1631 7.49865 18.0205 7.3972C17.8773 7.2954 17.7522 7.17032 17.6504 7.02715C17.549 6.88448 17.4748 6.70763 17.2388 6.09395L15.8762 2.55128Z" fill="url(#sparkle-grad)"/><path d="M7.20191 13.8736C7.13189 13.6916 6.95697 13.5714 6.7619 13.5714C6.56684 13.5714 6.39192 13.6916 6.3219 13.8736L5.50436 15.9992C5.36274 16.3674 5.31824 16.4735 5.25737 16.5592C5.19629 16.645 5.12124 16.7201 5.03534 16.7812C4.94973 16.842 4.84363 16.8865 4.47542 17.0282L2.34981 17.8457C2.16775 17.9157 2.04762 18.0907 2.04762 18.2857C2.04762 18.4808 2.16775 18.6557 2.34981 18.7257L4.47542 19.5433C4.84363 19.6849 4.94973 19.7294 5.03534 19.7903C5.12124 19.8513 5.19629 19.9264 5.25737 20.0123C5.31824 20.0979 5.36274 20.204 5.50436 20.5722L6.3219 22.6978C6.39192 22.8799 6.56684 23 6.76191 23C6.95697 23 7.13189 22.8799 7.20191 22.6978L8.01945 20.5722C8.16107 20.204 8.20557 20.0979 8.26644 20.0123C8.32752 19.9264 8.40257 19.8513 8.48847 19.7903C8.57408 19.7294 8.68018 19.6849 9.04839 19.5433L11.174 18.7257C11.3561 18.6557 11.4762 18.4808 11.4762 18.2857C11.4762 18.0907 11.3561 17.9157 11.174 17.8457L9.04839 17.0282C8.68018 16.8865 8.57408 16.842 8.48847 16.7812C8.40257 16.7201 8.32752 16.645 8.26644 16.5592C8.20557 16.4735 8.16107 16.3674 8.01945 15.9992L7.20191 13.8736Z" fill="url(#sparkle-grad)"/><path d="M5.00889 1.23504C4.95443 1.09344 4.81838 1 4.66667 1C4.51495 1 4.3789 1.09344 4.32444 1.23504L3.68857 2.88829C3.57843 3.17467 3.54381 3.2572 3.49647 3.32378C3.44896 3.39059 3.39059 3.44896 3.32378 3.49647C3.2572 3.54381 3.17467 3.57843 2.88829 3.68858L1.23504 4.32444C1.09344 4.3789 1 4.51495 1 4.66667C1 4.81838 1.09344 4.95443 1.23504 5.00889L2.88829 5.64476C3.17467 5.75491 3.2572 5.78952 3.32378 5.83686C3.39059 5.88437 3.44896 5.94274 3.49647 6.00955C3.54381 6.07613 3.57843 6.15866 3.68858 6.44504L4.32444 8.09829C4.3789 8.2399 4.51495 8.33333 4.66667 8.33333C4.81838 8.33333 4.95443 8.2399 5.00889 8.09829L5.64476 6.44504C5.75491 6.15866 5.78952 6.07613 5.83686 6.00955C5.88437 5.94274 5.94274 5.88437 6.00955 5.83686C6.07613 5.78952 6.15866 5.75491 6.44504 5.64476L8.09829 5.00889C8.2399 4.95443 8.33333 4.81838 8.33333 4.66667C8.33333 4.51495 8.2399 4.3789 8.09829 4.32444L6.44504 3.68857C6.15866 3.57843 6.07613 3.54381 6.00955 3.49647C5.94274 3.44896 5.88437 3.39059 5.83686 3.32378C5.78952 3.2572 5.75491 3.17467 5.64476 2.88829L5.00889 1.23504Z" fill="url(#sparkle-grad)"/></svg>
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" aria-hidden="true"><defs><linearGradient id="sparkle-grad" gradientUnits="userSpaceOnUse" x1="1" y1="1" x2="23" y2="23"><stop offset="0%" stop-color="#4a42c8"/><stop offset="52%" stop-color="#4a42c8"/><stop offset="100%" stop-color="#3060c8"/></linearGradient></defs><path d="M15.8762 2.55128C15.7595 2.24784 15.468 2.04762 15.1429 2.04762C14.8177 2.04762 14.5262 2.24784 14.4095 2.55128L13.0469 6.09396C12.8109 6.70763 12.7367 6.88448 12.6353 7.02715C12.5335 7.17032 12.4084 7.2954 12.2652 7.3972C12.1226 7.49865 11.9457 7.57282 11.332 7.80885L7.78937 9.17142C7.48594 9.28813 7.28571 9.57966 7.28571 9.90476C7.28571 10.2299 7.48594 10.5214 7.78937 10.6381L11.3321 12.0007C11.9457 12.2367 12.1226 12.3109 12.2652 12.4123C12.4084 12.5141 12.5335 12.6392 12.6353 12.7824C12.7367 12.925 12.8109 13.1019 13.0469 13.7156L14.4095 17.2582C14.5262 17.5617 14.8178 17.7619 15.1429 17.7619C15.468 17.7619 15.7595 17.5617 15.8762 17.2582L17.2388 13.7156C17.4748 13.1019 17.549 12.925 17.6504 12.7824C17.7522 12.6392 17.8773 12.5141 18.0205 12.4123C18.1631 12.3109 18.34 12.2367 18.9537 12.0007L22.4963 10.6381C22.7998 10.5214 23 10.2299 23 9.90476C23 9.57966 22.7998 9.28813 22.4963 9.17142L18.9537 7.80885C18.34 7.57282 18.1631 7.49865 18.0205 7.3972C17.8773 7.2954 17.7522 7.17032 17.6504 7.02715C17.549 6.88448 17.4748 6.70763 17.2388 6.09395L15.8762 2.55128Z" fill="url(#sparkle-grad)"/><path d="M7.20191 13.8736C7.13189 13.6916 6.95697 13.5714 6.7619 13.5714C6.56684 13.5714 6.39192 13.6916 6.3219 13.8736L5.50436 15.9992C5.36274 16.3674 5.31824 16.4735 5.25737 16.5592C5.19629 16.645 5.12124 16.7201 5.03534 16.7812C4.94973 16.842 4.84363 16.8865 4.47542 17.0282L2.34981 17.8457C2.16775 17.9157 2.04762 18.0907 2.04762 18.2857C2.04762 18.4808 2.16775 18.6557 2.34981 18.7257L4.47542 19.5433C4.84363 19.6849 4.94973 19.7294 5.03534 19.7903C5.12124 19.8513 5.19629 19.9264 5.25737 20.0123C5.31824 20.0979 5.36274 20.204 5.50436 20.5722L6.3219 22.6978C6.39192 22.8799 6.56684 23 6.76191 23C6.95697 23 7.13189 22.8799 7.20191 22.6978L8.01945 20.5722C8.16107 20.204 8.20557 20.0979 8.26644 20.0123C8.32752 19.9264 8.40257 19.8513 8.48847 19.7903C8.57408 19.7294 8.68018 19.6849 9.04839 19.5433L11.174 18.7257C11.3561 18.6557 11.4762 18.4808 11.4762 18.2857C11.4762 18.0907 11.3561 17.9157 11.174 17.8457L9.04839 17.0282C8.68018 16.8865 8.57408 16.842 8.48847 16.7812C8.40257 16.7201 8.32752 16.645 8.26644 16.5592C8.20557 16.4735 8.16107 16.3674 8.01945 15.9992L7.20191 13.8736Z" fill="url(#sparkle-grad)"/><path d="M5.00889 1.23504C4.95443 1.09344 4.81838 1 4.66667 1C4.51495 1 4.3789 1.09344 4.32444 1.23504L3.68857 2.88829C3.57843 3.17467 3.54381 3.2572 3.49647 3.32378C3.44896 3.39059 3.39059 3.44896 3.32378 3.49647C3.2572 3.54381 3.17467 3.57843 2.88829 3.68858L1.23504 4.32444C1.09344 4.3789 1 4.51495 1 4.66667C1 4.81838 1.09344 4.95443 1.23504 5.00889L2.88829 5.64476C3.17467 5.75491 3.2572 5.78952 3.32378 5.83686C3.39059 5.88437 3.44896 5.94274 3.49647 6.00955C3.54381 6.07613 3.57843 6.15866 3.68858 6.44504L4.32444 8.09829C4.3789 8.2399 4.51495 8.33333 4.66667 8.33333C4.81838 8.33333 4.95443 8.2399 5.00889 8.09829L5.64476 6.44504C5.75491 6.15866 5.78952 6.07613 5.83686 6.00955C5.88437 5.94274 5.94274 5.88437 6.00955 5.83686C6.07613 5.78952 6.15866 5.75491 6.44504 5.64476L8.09829 5.00889C8.2399 4.95443 8.33333 4.81838 8.33333 4.66667C8.33333 4.51495 8.2399 4.3789 8.09829 4.32444L6.44504 3.68857C6.15866 3.57843 6.07613 3.54381 6.00955 3.49647C5.94274 3.44896 5.88437 3.39059 5.83686 3.32378C5.78952 3.2572 5.75491 3.17467 5.64476 2.88829L5.00889 1.23504Z" fill="url(#sparkle-grad)"/></svg>
         </button>
         <!-- bell icon (Notifications) -->
         <button class="focus-ring glass w-11 h-11 flex items-center justify-center" aria-label="Notifications">
-          <svg class="w-6 h-6 text-[#404040]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.36941 5.45364C9.31947 5.24817 9.29297 5.03358 9.29297 4.81299C9.29297 3.31794 10.5049 2.10596 12 2.10596C13.4951 2.10596 14.707 3.31794 14.707 4.81299C14.707 5.03343 14.6806 5.24788 14.6307 5.45323C15.4648 5.75208 16.2371 6.1944 16.8982 6.76736C18.2228 7.91537 19.0006 9.50571 19.0006 11.2C19.0006 13.3077 19.5209 14.7999 20.1333 15.8357L20.1436 15.853C20.5371 16.5186 20.845 17.0392 21.0512 17.4125C21.1543 17.5991 21.245 17.7721 21.311 17.9203C21.3437 17.9937 21.3798 18.0819 21.4079 18.1756C21.4289 18.2454 21.4805 18.4265 21.459 18.6459C21.4472 18.7664 21.4202 19.0057 21.2809 19.25C21.1415 19.4942 20.9493 19.6393 20.8516 19.7108C20.6923 19.8272 20.533 19.8772 20.4536 19.8991C20.36 19.9251 20.269 19.9404 20.1935 19.9505C20.0426 19.9707 19.8669 19.981 19.6838 19.9873C19.3188 20 18.8084 20 18.1652 20H15.874C15.4299 21.7252 13.8638 23 12 23C10.1362 23 8.57006 21.7252 8.12602 20H5.83611C5.19298 20 4.68246 20 4.31742 19.9873C4.13431 19.981 3.95863 19.9707 3.80775 19.9505C3.73229 19.9404 3.64128 19.9251 3.54761 19.8991C3.46825 19.8772 3.3089 19.8272 3.14965 19.7108C3.05193 19.6393 2.8597 19.4942 2.72037 19.25C2.58103 19.0057 2.55401 18.7664 2.54223 18.6459C2.52078 18.4265 2.57236 18.2454 2.59332 18.1756C2.62144 18.0819 2.65752 17.9937 2.69024 17.9203C2.7562 17.7721 2.84694 17.5991 2.95005 17.4125C3.15634 17.0391 3.4639 16.5189 3.8577 15.853L3.8679 15.8357C4.48036 14.7999 5.00062 13.3077 5.00062 11.2C5.00062 9.50571 5.77841 7.91537 7.10305 6.76736C7.76385 6.19466 8.53572 5.75248 9.36941 5.45364ZM11.293 4.81299C11.293 4.42251 11.6095 4.10596 12 4.10596C12.3905 4.10596 12.707 4.42251 12.707 4.81299C12.707 4.88841 12.6954 4.9608 12.6738 5.02868C12.4507 5.00962 12.226 5 12.0006 5C11.7748 5 11.5498 5.00966 11.3263 5.02878C11.3046 4.96087 11.293 4.88844 11.293 4.81299ZM12 21C12.7403 21 13.3866 20.5978 13.7324 20H10.2676C10.6134 20.5978 11.2597 21 12 21ZM18.1424 18H5.85881C5.48767 18 5.17635 18 4.91707 17.998C5.09145 17.696 5.31439 17.3189 5.58946 16.8537C6.38914 15.5012 7.00062 13.6559 7.00062 11.2C7.00062 10.136 7.48711 9.08109 8.41291 8.27873C9.34322 7.47247 10.632 7 12.0006 7C13.3693 7 14.658 7.47247 15.5883 8.27873C16.5141 9.08109 17.0006 10.136 17.0006 11.2C17.0006 13.6559 17.6121 15.5012 18.4118 16.8537C18.6868 17.3189 18.9098 17.696 19.0842 17.998C18.8249 18 18.5136 18 18.1424 18Z" fill="currentColor"/></svg>
+          <svg class="w-6 h-6 text-[#1c1714]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.36941 5.45364C9.31947 5.24817 9.29297 5.03358 9.29297 4.81299C9.29297 3.31794 10.5049 2.10596 12 2.10596C13.4951 2.10596 14.707 3.31794 14.707 4.81299C14.707 5.03343 14.6806 5.24788 14.6307 5.45323C15.4648 5.75208 16.2371 6.1944 16.8982 6.76736C18.2228 7.91537 19.0006 9.50571 19.0006 11.2C19.0006 13.3077 19.5209 14.7999 20.1333 15.8357L20.1436 15.853C20.5371 16.5186 20.845 17.0392 21.0512 17.4125C21.1543 17.5991 21.245 17.7721 21.311 17.9203C21.3437 17.9937 21.3798 18.0819 21.4079 18.1756C21.4289 18.2454 21.4805 18.4265 21.459 18.6459C21.4472 18.7664 21.4202 19.0057 21.2809 19.25C21.1415 19.4942 20.9493 19.6393 20.8516 19.7108C20.6923 19.8272 20.533 19.8772 20.4536 19.8991C20.36 19.9251 20.269 19.9404 20.1935 19.9505C20.0426 19.9707 19.8669 19.981 19.6838 19.9873C19.3188 20 18.8084 20 18.1652 20H15.874C15.4299 21.7252 13.8638 23 12 23C10.1362 23 8.57006 21.7252 8.12602 20H5.83611C5.19298 20 4.68246 20 4.31742 19.9873C4.13431 19.981 3.95863 19.9707 3.80775 19.9505C3.73229 19.9404 3.64128 19.9251 3.54761 19.8991C3.46825 19.8772 3.3089 19.8272 3.14965 19.7108C3.05193 19.6393 2.8597 19.4942 2.72037 19.25C2.58103 19.0057 2.55401 18.7664 2.54223 18.6459C2.52078 18.4265 2.57236 18.2454 2.59332 18.1756C2.62144 18.0819 2.65752 17.9937 2.69024 17.9203C2.7562 17.7721 2.84694 17.5991 2.95005 17.4125C3.15634 17.0391 3.4639 16.5189 3.8577 15.853L3.8679 15.8357C4.48036 14.7999 5.00062 13.3077 5.00062 11.2C5.00062 9.50571 5.77841 7.91537 7.10305 6.76736C7.76385 6.19466 8.53572 5.75248 9.36941 5.45364ZM11.293 4.81299C11.293 4.42251 11.6095 4.10596 12 4.10596C12.3905 4.10596 12.707 4.42251 12.707 4.81299C12.707 4.88841 12.6954 4.9608 12.6738 5.02868C12.4507 5.00962 12.226 5 12.0006 5C11.7748 5 11.5498 5.00966 11.3263 5.02878C11.3046 4.96087 11.293 4.88844 11.293 4.81299ZM12 21C12.7403 21 13.3866 20.5978 13.7324 20H10.2676C10.6134 20.5978 11.2597 21 12 21ZM18.1424 18H5.85881C5.48767 18 5.17635 18 4.91707 17.998C5.09145 17.696 5.31439 17.3189 5.58946 16.8537C6.38914 15.5012 7.00062 13.6559 7.00062 11.2C7.00062 10.136 7.48711 9.08109 8.41291 8.27873C9.34322 7.47247 10.632 7 12.0006 7C13.3693 7 14.658 7.47247 15.5883 8.27873C16.5141 9.08109 17.0006 10.136 17.0006 11.2C17.0006 13.6559 17.6121 15.5012 18.4118 16.8537C18.6868 17.3189 18.9098 17.696 19.0842 17.998C18.8249 18 18.5136 18 18.1424 18Z" fill="currentColor"/></svg>
         </button>
         <!-- Profile avatar -->
-        <button class="focus-ring w-10 h-10 rounded-full ring-[1.5px] ring-surface-border-weak ring-offset-[1.5px]" aria-label="Profile" style="ring-offset-color: #F8F9FC;">
+        <button class="focus-ring w-10 h-10 rounded-full ring-[1.5px] ring-surface-border-weak ring-offset-[1.5px]" aria-label="Profile" style="ring-offset-color: #f9f8f8;">
           <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face" alt="Profile" class="w-full h-full rounded-full object-cover" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-          <div class="w-full h-full rounded-full overflow-hidden bg-[#C4A882] items-center justify-center" style="display:none">
+          <div class="w-full h-full rounded-full overflow-hidden bg-[#e0a030] items-center justify-center" style="display:none">
             <span class="text-white font-semibold text-sm">WW</span>
           </div>
         </button>
@@ -321,7 +321,7 @@
     </nav>
 
     <!-- Content Area -->
-    <main id="content" class="flex-1 min-w-0 min-h-0 flex flex-col" style="border-radius: 24px 0 0 0; border-top: 1px solid #DBE0EB; border-left: 1px solid #DBE0EB; background: #FFF; overflow: hidden;">
+    <main id="content" class="flex-1 min-w-0 min-h-0 flex flex-col" style="border-radius: 24px 0 0 0; border-top: 1px solid #e5e5e5; border-left: 1px solid #e5e5e5; background: #FFF; overflow: hidden;">
 
       <!-- ============================================================ -->
       <!-- SCREEN: HOME -->
@@ -332,10 +332,10 @@
           <h1 class="text-heading">Welcome back, Amanda!</h1>
           <div class="flex items-center gap-s3">
             <div class="glass-search flex items-center gap-s2 h-11 pl-[14px] pr-[14px]" style="width:180px;">
-              <svg class="w-[18px] h-[18px] text-[#404040] flex-shrink-0" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.2931 2.37207C5.96319 2.37207 2.45312 5.88213 2.45312 10.212C2.45312 14.5419 5.96319 18.052 10.2931 18.052C12.0558 18.052 13.6826 17.4702 14.992 16.4883L19.8393 21.3355C20.2298 21.726 20.863 21.726 21.2535 21.3355C21.644 20.945 21.644 20.3118 21.2535 19.9213L16.4271 15.0949C17.4949 13.7554 18.133 12.0582 18.133 10.212C18.133 5.88213 14.6229 2.37207 10.2931 2.37207ZM4.45312 10.212C4.45312 6.9867 7.06776 4.37207 10.2931 4.37207C13.5184 4.37207 16.133 6.9867 16.133 10.212C16.133 13.4373 13.5184 16.052 10.2931 16.052C7.06776 16.052 4.45312 13.4373 4.45312 10.212Z" fill="currentColor"/></svg>
-              <input type="search" placeholder="Search" class="flex-1 text-[15px] font-medium placeholder:text-[#b0b0b0] text-[#404040] outline-none bg-transparent leading-5">
+              <svg class="w-[18px] h-[18px] text-[#1c1714] flex-shrink-0" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.2931 2.37207C5.96319 2.37207 2.45312 5.88213 2.45312 10.212C2.45312 14.5419 5.96319 18.052 10.2931 18.052C12.0558 18.052 13.6826 17.4702 14.992 16.4883L19.8393 21.3355C20.2298 21.726 20.863 21.726 21.2535 21.3355C21.644 20.945 21.644 20.3118 21.2535 19.9213L16.4271 15.0949C17.4949 13.7554 18.133 12.0582 18.133 10.212C18.133 5.88213 14.6229 2.37207 10.2931 2.37207ZM4.45312 10.212C4.45312 6.9867 7.06776 4.37207 10.2931 4.37207C13.5184 4.37207 16.133 6.9867 16.133 10.212C16.133 13.4373 13.5184 16.052 10.2931 16.052C7.06776 16.052 4.45312 13.4373 4.45312 10.212Z" fill="currentColor"/></svg>
+              <input type="search" placeholder="Search" class="flex-1 text-[15px] font-medium placeholder:text-[#bcb8b8] text-[#1c1714] outline-none bg-transparent leading-5">
             </div>
-            <button class="w-11 h-11 rounded-full flex items-center justify-center" style="background:#6559ff;" aria-label="Create new">
+            <button class="w-11 h-11 rounded-full flex items-center justify-center" style="background:#4a42c8;" aria-label="Create new">
               <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
             </button>
           </div>
@@ -349,63 +349,63 @@
             <section class="mb-s6" aria-label="Quick stats">
               <div class="flex gap-[11px]">
                 <!-- Card 1: Heads up -->
-                <div class="relative flex-shrink-0 bg-white border border-[#DBE0EB] rounded-[16px] p-[16px] flex items-center" style="min-width:140px;">
+                <div class="relative flex-shrink-0 bg-white border border-[#e5e5e5] rounded-[16px] p-[16px] flex items-center" style="min-width:140px;">
                   <div class="flex flex-col gap-[4px]">
-                    <div class="w-[24px] h-[24px] rounded-[6px] bg-[#ECEDFE] flex items-center justify-center">
-                      <svg class="w-[14px] h-[14px] text-[#675DF4]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-5v12L3 13v-2z"/><path d="M11.6 16.8a3 3 0 0 1-5.8-1.6"/></svg>
+                    <div class="w-[24px] h-[24px] rounded-[6px] bg-[#ecedfe] flex items-center justify-center">
+                      <svg class="w-[14px] h-[14px] text-[#4a42c8]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-5v12L3 13v-2z"/><path d="M11.6 16.8a3 3 0 0 1-5.8-1.6"/></svg>
                     </div>
                     <div>
-                      <div class="text-[16px] leading-[24px] text-[#1f2533]" style="font-weight:400;">Heads up</div>
-                      <div class="text-[14px] leading-[20px] text-[#545f70]" style="font-weight:400;">1 new</div>
+                      <div class="text-[16px] leading-[24px] text-[#1c1714]" style="font-weight:400;">Heads up</div>
+                      <div class="text-[14px] leading-[20px] text-[#7a7674]" style="font-weight:400;">1 new</div>
                     </div>
                   </div>
-                  <div class="absolute top-[14px] right-[14px] w-[10px] h-[10px] rounded-full bg-[#c62f35]"></div>
+                  <div class="absolute top-[14px] right-[14px] w-[10px] h-[10px] rounded-full bg-[#b02010]"></div>
                 </div>
                 <!-- Card 2: Issues -->
-                <div class="flex-shrink-0 bg-white border border-[#DBE0EB] rounded-[16px] p-[16px] flex items-center" style="min-width:140px;">
+                <div class="flex-shrink-0 bg-white border border-[#e5e5e5] rounded-[16px] p-[16px] flex items-center" style="min-width:140px;">
                   <div class="flex flex-col gap-[4px]">
-                    <div class="w-[24px] h-[24px] rounded-[6px] bg-[#ECEDFE] flex items-center justify-center">
-                      <svg class="w-[14px] h-[14px] text-[#675DF4]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" rx="2"/><circle cx="12" cy="10" r="1"/><circle cx="8" cy="10" r="1"/><circle cx="16" cy="10" r="1"/></svg>
+                    <div class="w-[24px] h-[24px] rounded-[6px] bg-[#ecedfe] flex items-center justify-center">
+                      <svg class="w-[14px] h-[14px] text-[#4a42c8]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" rx="2"/><circle cx="12" cy="10" r="1"/><circle cx="8" cy="10" r="1"/><circle cx="16" cy="10" r="1"/></svg>
                     </div>
                     <div>
-                      <div class="text-[16px] leading-[24px] text-[#1f2533]" style="font-weight:400;">Issues</div>
-                      <div class="text-[14px] leading-[20px] text-[#545f70]" style="font-weight:400;">5 open</div>
+                      <div class="text-[16px] leading-[24px] text-[#1c1714]" style="font-weight:400;">Issues</div>
+                      <div class="text-[14px] leading-[20px] text-[#7a7674]" style="font-weight:400;">5 open</div>
                     </div>
                   </div>
                 </div>
                 <!-- Card 3: Actions -->
-                <div class="flex-shrink-0 bg-white border border-[#DBE0EB] rounded-[16px] p-[16px] flex items-center" style="min-width:140px;">
+                <div class="flex-shrink-0 bg-white border border-[#e5e5e5] rounded-[16px] p-[16px] flex items-center" style="min-width:140px;">
                   <div class="flex flex-col gap-[4px]">
-                    <div class="w-[24px] h-[24px] rounded-[6px] bg-[#ECEDFE] flex items-center justify-center">
-                      <svg class="w-[14px] h-[14px] text-[#675DF4]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12l2 2 4-4"/></svg>
+                    <div class="w-[24px] h-[24px] rounded-[6px] bg-[#ecedfe] flex items-center justify-center">
+                      <svg class="w-[14px] h-[14px] text-[#4a42c8]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12l2 2 4-4"/></svg>
                     </div>
                     <div>
-                      <div class="text-[16px] leading-[24px] text-[#1f2533]" style="font-weight:400;">Actions</div>
-                      <div class="text-[14px] leading-[20px] text-[#545f70]" style="font-weight:400;">10 assigned</div>
+                      <div class="text-[16px] leading-[24px] text-[#1c1714]" style="font-weight:400;">Actions</div>
+                      <div class="text-[14px] leading-[20px] text-[#7a7674]" style="font-weight:400;">10 assigned</div>
                     </div>
                   </div>
                 </div>
                 <!-- Card 4: Bookmarks -->
-                <div class="flex-shrink-0 bg-white border border-[#DBE0EB] rounded-[16px] p-[16px] flex items-center" style="min-width:140px;">
+                <div class="flex-shrink-0 bg-white border border-[#e5e5e5] rounded-[16px] p-[16px] flex items-center" style="min-width:140px;">
                   <div class="flex flex-col gap-[4px]">
-                    <div class="w-[24px] h-[24px] rounded-[6px] bg-[#ECEDFE] flex items-center justify-center">
-                      <svg class="w-[14px] h-[14px] text-[#675DF4]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                    <div class="w-[24px] h-[24px] rounded-[6px] bg-[#ecedfe] flex items-center justify-center">
+                      <svg class="w-[14px] h-[14px] text-[#4a42c8]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
                     </div>
                     <div>
-                      <div class="text-[16px] leading-[24px] text-[#1f2533]" style="font-weight:400;">Bookmarks</div>
-                      <div class="text-[14px] leading-[20px] text-[#545f70]" style="font-weight:400;">3</div>
+                      <div class="text-[16px] leading-[24px] text-[#1c1714]" style="font-weight:400;">Bookmarks</div>
+                      <div class="text-[14px] leading-[20px] text-[#7a7674]" style="font-weight:400;">3</div>
                     </div>
                   </div>
                 </div>
                 <!-- Card 5: Training -->
-                <div class="flex-shrink-0 bg-white border border-[#DBE0EB] rounded-[16px] p-[16px] flex items-center" style="min-width:140px;">
+                <div class="flex-shrink-0 bg-white border border-[#e5e5e5] rounded-[16px] p-[16px] flex items-center" style="min-width:140px;">
                   <div class="flex flex-col gap-[4px]">
-                    <div class="w-[24px] h-[24px] rounded-[6px] bg-[#ECEDFE] flex items-center justify-center">
-                      <svg class="w-[14px] h-[14px] text-[#675DF4]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/></svg>
+                    <div class="w-[24px] h-[24px] rounded-[6px] bg-[#ecedfe] flex items-center justify-center">
+                      <svg class="w-[14px] h-[14px] text-[#4a42c8]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/></svg>
                     </div>
                     <div>
-                      <div class="text-[16px] leading-[24px] text-[#545f70]" style="font-weight:400;">Training</div>
-                      <div class="text-[14px] leading-[20px] text-[#828ea0]" style="font-weight:400;">0 new</div>
+                      <div class="text-[16px] leading-[24px] text-[#7a7674]" style="font-weight:400;">Training</div>
+                      <div class="text-[14px] leading-[20px] text-[#7a7674]" style="font-weight:400;">0 new</div>
                     </div>
                   </div>
                 </div>
@@ -417,59 +417,59 @@
               <div class="flex items-center justify-between mb-s3">
                 <div class="flex items-center gap-s2">
                   <h2 style="font-size:18px;font-weight:600;line-height:26px;">In progress</h2>
-                  <span class="inline-flex items-center justify-center w-5 h-5 rounded-full text-[11px] font-bold text-white" style="background:#6559ff;">4</span>
+                  <span class="inline-flex items-center justify-center w-5 h-5 rounded-full text-[11px] font-bold text-white" style="background:#4a42c8;">4</span>
                 </div>
                 <button class="text-label-small text-accent">View all</button>
               </div>
               <div class="scroll-row pb-s2" style="gap:10px;">
                 <!-- Card 1: Inspection -->
-                <div class="flex-shrink-0 w-[320px] bg-white border border-[#DBE0EB] rounded-[16px] p-[16px]">
+                <div class="flex-shrink-0 w-[320px] bg-white border border-[#e5e5e5] rounded-[16px] p-[16px]">
                   <div class="flex items-center gap-[4px] mb-[8px]">
-                    <svg class="w-[12px] h-[12px] text-[#4740D4]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="11" width="2.5" height="2.5" rx="0.5"/><line x1="13" y1="12.25" x2="16" y2="12.25"/><rect x="8" y="16" width="2.5" height="2.5" rx="0.5"/><line x1="13" y1="17.25" x2="16" y2="17.25"/></svg>
-                    <span class="text-[10px] leading-[12px] font-bold tracking-[1px] uppercase text-[#4740D4]">INSPECTION</span>
+                    <svg class="w-[12px] h-[12px] text-[#4a42c8]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="11" width="2.5" height="2.5" rx="0.5"/><line x1="13" y1="12.25" x2="16" y2="12.25"/><rect x="8" y="16" width="2.5" height="2.5" rx="0.5"/><line x1="13" y1="17.25" x2="16" y2="17.25"/></svg>
+                    <span class="text-[10px] leading-[12px] font-bold tracking-[1px] uppercase text-[#4a42c8]">INSPECTION</span>
                   </div>
-                  <p class="text-[16px] leading-[24px] text-[#1f2533] mb-[4px] line-clamp-2" style="font-weight:400;">00101 / Ari Bautista / 5 Oct 2023 / ***123 Test AssetX / Bunnings Rose..</p>
-                  <p class="text-[12px] leading-[16px] text-[#545f70] mb-[8px]" style="font-weight:400;">F10 Food Safety Instructions</p>
-                  <div class="flex items-center gap-[4px] text-[12px] leading-[16px] text-[#545f70]" style="font-weight:500;">
+                  <p class="text-[16px] leading-[24px] text-[#1c1714] mb-[4px] line-clamp-2" style="font-weight:400;">00101 / Ari Bautista / 5 Oct 2023 / ***123 Test AssetX / Bunnings Rose..</p>
+                  <p class="text-[12px] leading-[16px] text-[#7a7674] mb-[8px]" style="font-weight:400;">F10 Food Safety Instructions</p>
+                  <div class="flex items-center gap-[4px] text-[12px] leading-[16px] text-[#7a7674]" style="font-weight:500;">
                     <svg class="w-[12px] h-[12px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                     <span>Updated 12 days ago</span>
                   </div>
                 </div>
                 <!-- Card 2: Inspection -->
-                <div class="flex-shrink-0 w-[320px] bg-white border border-[#DBE0EB] rounded-[16px] p-[16px]">
+                <div class="flex-shrink-0 w-[320px] bg-white border border-[#e5e5e5] rounded-[16px] p-[16px]">
                   <div class="flex items-center gap-[4px] mb-[8px]">
-                    <svg class="w-[12px] h-[12px] text-[#4740D4]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="11" width="2.5" height="2.5" rx="0.5"/><line x1="13" y1="12.25" x2="16" y2="12.25"/><rect x="8" y="16" width="2.5" height="2.5" rx="0.5"/><line x1="13" y1="17.25" x2="16" y2="17.25"/></svg>
-                    <span class="text-[10px] leading-[12px] font-bold tracking-[1px] uppercase text-[#4740D4]">INSPECTION</span>
+                    <svg class="w-[12px] h-[12px] text-[#4a42c8]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="11" width="2.5" height="2.5" rx="0.5"/><line x1="13" y1="12.25" x2="16" y2="12.25"/><rect x="8" y="16" width="2.5" height="2.5" rx="0.5"/><line x1="13" y1="17.25" x2="16" y2="17.25"/></svg>
+                    <span class="text-[10px] leading-[12px] font-bold tracking-[1px] uppercase text-[#4a42c8]">INSPECTION</span>
                   </div>
-                  <p class="text-[16px] leading-[24px] text-[#1f2533] mb-[4px]" style="font-weight:400;">Inspections Title</p>
-                  <p class="text-[12px] leading-[16px] text-[#545f70] mb-[8px]" style="font-weight:400;">Template Title</p>
-                  <div class="flex items-center gap-[4px] text-[12px] leading-[16px] text-[#545f70]" style="font-weight:500;">
+                  <p class="text-[16px] leading-[24px] text-[#1c1714] mb-[4px]" style="font-weight:400;">Inspections Title</p>
+                  <p class="text-[12px] leading-[16px] text-[#7a7674] mb-[8px]" style="font-weight:400;">Template Title</p>
+                  <div class="flex items-center gap-[4px] text-[12px] leading-[16px] text-[#7a7674]" style="font-weight:500;">
                     <svg class="w-[12px] h-[12px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                     <span>Updated 13 days ago</span>
                   </div>
                 </div>
                 <!-- Card 3: Course -->
-                <div class="flex-shrink-0 w-[320px] bg-white border border-[#DBE0EB] rounded-[16px] p-[16px]">
+                <div class="flex-shrink-0 w-[320px] bg-white border border-[#e5e5e5] rounded-[16px] p-[16px]">
                   <div class="flex items-center gap-[4px] mb-[8px]">
-                    <svg class="w-[12px] h-[12px] text-[#4740D4]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/></svg>
-                    <span class="text-[10px] leading-[12px] font-bold tracking-[1px] uppercase text-[#4740D4]">COURSE</span>
+                    <svg class="w-[12px] h-[12px] text-[#4a42c8]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/></svg>
+                    <span class="text-[10px] leading-[12px] font-bold tracking-[1px] uppercase text-[#4a42c8]">COURSE</span>
                   </div>
-                  <p class="text-[16px] leading-[24px] text-[#1f2533] mb-[4px] line-clamp-2" style="font-weight:400;">Karamo's Diversity, Equity and Inclusion</p>
-                  <p class="text-[12px] leading-[16px] text-[#545f70] mb-[8px]" style="font-weight:400;">by EdApp</p>
-                  <div class="flex items-center gap-[4px] text-[12px] leading-[16px] text-[#545f70]" style="font-weight:500;">
+                  <p class="text-[16px] leading-[24px] text-[#1c1714] mb-[4px] line-clamp-2" style="font-weight:400;">Karamo's Diversity, Equity and Inclusion</p>
+                  <p class="text-[12px] leading-[16px] text-[#7a7674] mb-[8px]" style="font-weight:400;">by EdApp</p>
+                  <div class="flex items-center gap-[4px] text-[12px] leading-[16px] text-[#7a7674]" style="font-weight:500;">
                     <svg class="w-[12px] h-[12px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                     <span>Updated 24 days ago</span>
                   </div>
                 </div>
                 <!-- Card 4: Course -->
-                <div class="flex-shrink-0 w-[320px] bg-white border border-[#DBE0EB] rounded-[16px] p-[16px]">
+                <div class="flex-shrink-0 w-[320px] bg-white border border-[#e5e5e5] rounded-[16px] p-[16px]">
                   <div class="flex items-center gap-[4px] mb-[8px]">
-                    <svg class="w-[12px] h-[12px] text-[#4740D4]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/></svg>
-                    <span class="text-[10px] leading-[12px] font-bold tracking-[1px] uppercase text-[#4740D4]">COURSE</span>
+                    <svg class="w-[12px] h-[12px] text-[#4a42c8]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/></svg>
+                    <span class="text-[10px] leading-[12px] font-bold tracking-[1px] uppercase text-[#4a42c8]">COURSE</span>
                   </div>
-                  <p class="text-[16px] leading-[24px] text-[#1f2533] mb-[4px]" style="font-weight:400;">Commercial Model quiz: GTM</p>
-                  <p class="text-[12px] leading-[16px] text-[#545f70] mb-[8px] truncate" style="font-weight:400;">We can still g...</p>
-                  <div class="flex items-center gap-[4px] text-[12px] leading-[16px] text-[#545f70]" style="font-weight:500;">
+                  <p class="text-[16px] leading-[24px] text-[#1c1714] mb-[4px]" style="font-weight:400;">Commercial Model quiz: GTM</p>
+                  <p class="text-[12px] leading-[16px] text-[#7a7674] mb-[8px] truncate" style="font-weight:400;">We can still g...</p>
+                  <div class="flex items-center gap-[4px] text-[12px] leading-[16px] text-[#7a7674]" style="font-weight:500;">
                     <svg class="w-[12px] h-[12px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                     <span>Updated 2...</span>
                   </div>
@@ -499,7 +499,7 @@
                   <div class="flex items-center justify-between px-s4 py-s3 bg-background-weak">
                     <div class="flex items-center gap-s2">
                       <span class="text-title-small">Today</span>
-                      <span class="inline-flex items-center justify-center w-5 h-5 rounded-full text-[11px] font-bold text-white" style="background:#6559ff;">9</span>
+                      <span class="inline-flex items-center justify-center w-5 h-5 rounded-full text-[11px] font-bold text-white" style="background:#4a42c8;">9</span>
                     </div>
                     <button class="text-label-small text-accent">View all</button>
                   </div>
@@ -508,11 +508,11 @@
                   <div class="px-s4 py-s3 border-b border-surface-border-weakest">
                     <div class="flex items-start justify-between mb-s1">
                       <div class="flex items-center gap-s1">
-                        <svg class="w-3.5 h-3.5 text-[#4740D4]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12l2 2 4-4"/></svg>
-                        <span class="text-overline-small uppercase text-[#4740D4]">SCHEDULED INSPECTION</span>
+                        <svg class="w-3.5 h-3.5 text-[#4a42c8]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12l2 2 4-4"/></svg>
+                        <span class="text-overline-small uppercase text-[#4a42c8]">SCHEDULED INSPECTION</span>
                       </div>
                       <div class="flex items-center gap-s2">
-                        <span class="badge badge-warning">To Do</span>
+                        <span class="badge badge-neutral">To Do</span>
                         <button class="w-7 h-7 flex items-center justify-center rounded-small text-surface-text-weaker" aria-label="More options">
                           <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg>
                         </button>
@@ -535,21 +535,21 @@
                   <div class="px-s4 py-s3 border-b border-surface-border-weakest">
                     <div class="flex items-start justify-between mb-s1">
                       <div class="flex items-center gap-s1">
-                        <svg class="w-3.5 h-3.5 text-[#4740D4]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12l2 2 4-4"/></svg>
-                        <span class="text-overline-small uppercase text-[#4740D4]">ACTION</span>
+                        <svg class="w-3.5 h-3.5 text-[#4a42c8]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12l2 2 4-4"/></svg>
+                        <span class="text-overline-small uppercase text-[#4a42c8]">ACTION</span>
                       </div>
                       <div class="flex items-center gap-s2">
                         <span class="text-body-xsmall text-surface-text-weaker">WB-27654</span>
-                        <span class="badge badge-warning">To Do</span>
+                        <span class="badge badge-neutral">To Do</span>
                       </div>
                     </div>
                     <p class="text-label-medium text-surface-text mb-s2">Clean inside vehicle</p>
                     <div class="flex items-center gap-s3 text-body-xsmall text-surface-text-weaker">
                       <!-- Avatar group -->
                       <div class="flex -space-x-1.5">
-                        <div class="w-5 h-5 rounded-full bg-[#E0E4FF] border-2 border-white flex items-center justify-center text-[8px] font-bold text-accent">A</div>
-                        <div class="w-5 h-5 rounded-full bg-[#FFE0E6] border-2 border-white flex items-center justify-center text-[8px] font-bold text-[#BF2600]">B</div>
-                        <div class="w-5 h-5 rounded-full bg-[#E3FCEF] border-2 border-white flex items-center justify-center text-[8px] font-bold text-positive">C</div>
+                        <div class="w-5 h-5 rounded-full bg-[#e6e4f8] border-2 border-white flex items-center justify-center text-[8px] font-bold text-accent">A</div>
+                        <div class="w-5 h-5 rounded-full bg-[#f9d8d0] border-2 border-white flex items-center justify-center text-[8px] font-bold text-[#b02010]">B</div>
+                        <div class="w-5 h-5 rounded-full bg-[#d0e9d8] border-2 border-white flex items-center justify-center text-[8px] font-bold text-positive">C</div>
                       </div>
                       <span>Jan 21</span>
                       <span class="flex items-center gap-0.5">
@@ -563,10 +563,10 @@
                   <div class="px-s4 py-s3 border-b border-surface-border-weakest">
                     <div class="flex items-start justify-between mb-s1">
                       <div class="flex items-center gap-s1">
-                        <svg class="w-3.5 h-3.5 text-[#4740D4]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5"/></svg>
-                        <span class="text-overline-small uppercase text-[#4740D4]">TRAINING</span>
+                        <svg class="w-3.5 h-3.5 text-[#4a42c8]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5"/></svg>
+                        <span class="text-overline-small uppercase text-[#4a42c8]">TRAINING</span>
                       </div>
-                      <span class="badge badge-warning">To Do</span>
+                      <span class="badge badge-neutral">To Do</span>
                     </div>
                     <p class="text-label-medium text-surface-text mb-s1">Operating the new excavator</p>
                     <p class="text-body-xsmall mb-s2">by <span class="text-accent">Admin team</span></p>
@@ -590,7 +590,7 @@
                   <div class="flex items-center justify-between px-s4 py-s3 bg-background-weak">
                     <div class="flex items-center gap-s2">
                       <span class="text-title-small">Upcoming</span>
-                      <span class="inline-flex items-center justify-center w-5 h-5 rounded-full text-[11px] font-bold text-white" style="background:#6559ff;">5</span>
+                      <span class="inline-flex items-center justify-center w-5 h-5 rounded-full text-[11px] font-bold text-white" style="background:#4a42c8;">5</span>
                     </div>
                     <button class="text-label-small text-accent">View all</button>
                   </div>
@@ -599,11 +599,11 @@
                   <div class="px-s4 py-s3 border-b border-surface-border-weakest">
                     <div class="flex items-start justify-between mb-s1">
                       <div class="flex items-center gap-s1">
-                        <svg class="w-3.5 h-3.5 text-[#4740D4]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12l2 2 4-4"/></svg>
-                        <span class="text-overline-small uppercase text-[#4740D4]">SCHEDULED INSPECTION</span>
+                        <svg class="w-3.5 h-3.5 text-[#4a42c8]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12l2 2 4-4"/></svg>
+                        <span class="text-overline-small uppercase text-[#4a42c8]">SCHEDULED INSPECTION</span>
                       </div>
                       <div class="flex items-center gap-s2">
-                        <span class="badge badge-warning">To Do</span>
+                        <span class="badge badge-neutral">To Do</span>
                         <button class="w-7 h-7 flex items-center justify-center rounded-small text-surface-text-weaker" aria-label="More options">
                           <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg>
                         </button>
@@ -626,19 +626,19 @@
                   <div class="px-s4 py-s3 border-b border-surface-border-weakest">
                     <div class="flex items-start justify-between mb-s1">
                       <div class="flex items-center gap-s1">
-                        <svg class="w-3.5 h-3.5 text-[#4740D4]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12l2 2 4-4"/></svg>
-                        <span class="text-overline-small uppercase text-[#4740D4]">ACTION</span>
+                        <svg class="w-3.5 h-3.5 text-[#4a42c8]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12l2 2 4-4"/></svg>
+                        <span class="text-overline-small uppercase text-[#4a42c8]">ACTION</span>
                       </div>
                       <div class="flex items-center gap-s2">
                         <span class="text-body-xsmall text-surface-text-weaker">WB-28001</span>
-                        <span class="badge badge-warning">To Do</span>
+                        <span class="badge badge-neutral">To Do</span>
                       </div>
                     </div>
                     <p class="text-label-medium text-surface-text mb-s2">Replace warehouse signage</p>
                     <div class="flex items-center gap-s3 text-body-xsmall text-surface-text-weaker">
                       <div class="flex -space-x-1.5">
-                        <div class="w-5 h-5 rounded-full bg-[#E0E4FF] border-2 border-white flex items-center justify-center text-[8px] font-bold text-accent">D</div>
-                        <div class="w-5 h-5 rounded-full bg-[#FFE0E6] border-2 border-white flex items-center justify-center text-[8px] font-bold text-[#BF2600]">E</div>
+                        <div class="w-5 h-5 rounded-full bg-[#e6e4f8] border-2 border-white flex items-center justify-center text-[8px] font-bold text-accent">D</div>
+                        <div class="w-5 h-5 rounded-full bg-[#f9d8d0] border-2 border-white flex items-center justify-center text-[8px] font-bold text-[#b02010]">E</div>
                       </div>
                       <span>Feb 3</span>
                       <span class="flex items-center gap-0.5">
@@ -652,10 +652,10 @@
                   <div class="px-s4 py-s3">
                     <div class="flex items-start justify-between mb-s1">
                       <div class="flex items-center gap-s1">
-                        <svg class="w-3.5 h-3.5 text-[#4740D4]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5"/></svg>
-                        <span class="text-overline-small uppercase text-[#4740D4]">TRAINING</span>
+                        <svg class="w-3.5 h-3.5 text-[#4a42c8]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5"/></svg>
+                        <span class="text-overline-small uppercase text-[#4a42c8]">TRAINING</span>
                       </div>
-                      <span class="badge badge-warning">To Do</span>
+                      <span class="badge badge-neutral">To Do</span>
                     </div>
                     <p class="text-label-medium text-surface-text mb-s1">Advanced safety protocols</p>
                     <p class="text-body-xsmall mb-s2">by <span class="text-accent">Safety team</span></p>
@@ -683,11 +683,11 @@
                   <div class="px-s4 py-s3 border-b border-surface-border-weakest">
                     <div class="flex items-start justify-between mb-s1">
                       <div class="flex items-center gap-s1">
-                        <svg class="w-3.5 h-3.5 text-[#4740D4]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12l2 2 4-4"/></svg>
-                        <span class="text-overline-small uppercase text-[#4740D4]">SCHEDULED INSPECTION</span>
+                        <svg class="w-3.5 h-3.5 text-[#4a42c8]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12l2 2 4-4"/></svg>
+                        <span class="text-overline-small uppercase text-[#4a42c8]">SCHEDULED INSPECTION</span>
                       </div>
                       <div class="flex items-center gap-s2">
-                        <span class="badge badge-warning">To Do</span>
+                        <span class="badge badge-neutral">To Do</span>
                         <button class="w-7 h-7 flex items-center justify-center rounded-small text-surface-text-weaker" aria-label="More options">
                           <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg>
                         </button>
@@ -710,18 +710,18 @@
                   <div class="px-s4 py-s3 border-b border-surface-border-weakest">
                     <div class="flex items-start justify-between mb-s1">
                       <div class="flex items-center gap-s1">
-                        <svg class="w-3.5 h-3.5 text-[#4740D4]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12l2 2 4-4"/></svg>
-                        <span class="text-overline-small uppercase text-[#4740D4]">ACTION</span>
+                        <svg class="w-3.5 h-3.5 text-[#4a42c8]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12l2 2 4-4"/></svg>
+                        <span class="text-overline-small uppercase text-[#4a42c8]">ACTION</span>
                       </div>
                       <div class="flex items-center gap-s2">
                         <span class="text-body-xsmall text-surface-text-weaker">WB-28102</span>
-                        <span class="badge badge-warning">To Do</span>
+                        <span class="badge badge-neutral">To Do</span>
                       </div>
                     </div>
                     <p class="text-label-medium text-surface-text mb-s2">Update emergency contact list</p>
                     <div class="flex items-center gap-s3 text-body-xsmall text-surface-text-weaker">
                       <div class="flex -space-x-1.5">
-                        <div class="w-5 h-5 rounded-full bg-[#E0E4FF] border-2 border-white flex items-center justify-center text-[8px] font-bold text-accent">F</div>
+                        <div class="w-5 h-5 rounded-full bg-[#e6e4f8] border-2 border-white flex items-center justify-center text-[8px] font-bold text-accent">F</div>
                       </div>
                       <span>Mar 10</span>
                       <span class="flex items-center gap-0.5">
@@ -735,10 +735,10 @@
                   <div class="px-s4 py-s3">
                     <div class="flex items-start justify-between mb-s1">
                       <div class="flex items-center gap-s1">
-                        <svg class="w-3.5 h-3.5 text-[#4740D4]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5"/></svg>
-                        <span class="text-overline-small uppercase text-[#4740D4]">TRAINING</span>
+                        <svg class="w-3.5 h-3.5 text-[#4a42c8]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5"/></svg>
+                        <span class="text-overline-small uppercase text-[#4a42c8]">TRAINING</span>
                       </div>
-                      <span class="badge badge-warning">To Do</span>
+                      <span class="badge badge-neutral">To Do</span>
                     </div>
                     <p class="text-label-medium text-surface-text mb-s1">Hazardous materials handling</p>
                     <p class="text-body-xsmall mb-s2">by <span class="text-accent">Compliance team</span></p>
@@ -769,15 +769,15 @@
           <div class="flex items-center gap-s3">
             <div class="glass h-11 flex items-center gap-[12px] px-[4px]" style="border-radius:296px;">
               <div class="w-[36px] h-[36px] flex items-center justify-center rounded-full">
-                <svg class="w-[22px] h-[22px] text-[#1f2533]" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16M7 12h10M10 18h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+                <svg class="w-[22px] h-[22px] text-[#1c1714]" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16M7 12h10M10 18h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
               </div>
               <div class="w-[36px] h-[36px] flex items-center justify-center rounded-full">
-                <svg class="w-[22px] h-[22px] text-[#1f2533]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4v16m0 0l-3-3m3 3l3-3M17 20V4m0 0l3 3m-3-3l-3 3"/></svg>
+                <svg class="w-[22px] h-[22px] text-[#1c1714]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4v16m0 0l-3-3m3 3l3-3M17 20V4m0 0l3 3m-3-3l-3 3"/></svg>
               </div>
             </div>
             <div class="glass-search flex items-center gap-s1 h-11 pl-[11px] pr-[10px] min-w-[180px]">
-              <svg class="w-[18px] h-[18px] text-[#404040] flex-shrink-0" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.2931 2.37207C5.96319 2.37207 2.45312 5.88213 2.45312 10.212C2.45312 14.5419 5.96319 18.052 10.2931 18.052C12.0558 18.052 13.6826 17.4702 14.992 16.4883L19.8393 21.3355C20.2298 21.726 20.863 21.726 21.2535 21.3355C21.644 20.945 21.644 20.3118 21.2535 19.9213L16.4271 15.0949C17.4949 13.7554 18.133 12.0582 18.133 10.212C18.133 5.88213 14.6229 2.37207 10.2931 2.37207ZM4.45312 10.212C4.45312 6.9867 7.06776 4.37207 10.2931 4.37207C13.5184 4.37207 16.133 6.9867 16.133 10.212C16.133 13.4373 13.5184 16.052 10.2931 16.052C7.06776 16.052 4.45312 13.4373 4.45312 10.212Z" fill="currentColor"/></svg>
-              <input type="search" placeholder="Search" class="flex-1 text-[17px] font-medium placeholder:text-[#b0b0b0] text-[#404040] outline-none bg-transparent leading-5">
+              <svg class="w-[18px] h-[18px] text-[#1c1714] flex-shrink-0" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.2931 2.37207C5.96319 2.37207 2.45312 5.88213 2.45312 10.212C2.45312 14.5419 5.96319 18.052 10.2931 18.052C12.0558 18.052 13.6826 17.4702 14.992 16.4883L19.8393 21.3355C20.2298 21.726 20.863 21.726 21.2535 21.3355C21.644 20.945 21.644 20.3118 21.2535 19.9213L16.4271 15.0949C17.4949 13.7554 18.133 12.0582 18.133 10.212C18.133 5.88213 14.6229 2.37207 10.2931 2.37207ZM4.45312 10.212C4.45312 6.9867 7.06776 4.37207 10.2931 4.37207C13.5184 4.37207 16.133 6.9867 16.133 10.212C16.133 13.4373 13.5184 16.052 10.2931 16.052C7.06776 16.052 4.45312 13.4373 4.45312 10.212Z" fill="currentColor"/></svg>
+              <input type="search" placeholder="Search" class="flex-1 text-[17px] font-medium placeholder:text-[#bcb8b8] text-[#1c1714] outline-none bg-transparent leading-5">
             </div>
           </div>
         </header>
@@ -794,111 +794,111 @@
         <div class="flex-1 overflow-y-auto">
           <div class="flex flex-col">
             <!-- Row 1 -->
-            <div class="flex items-center border-b border-[#dbe0eb] px-[8px]">
+            <div class="flex items-center border-b border-[#e5e5e5] px-[8px]">
               <div class="flex gap-[8px] items-center p-[16px]" style="width:740px;">
-                <div class="w-[32px] h-[32px] rounded-[8px] bg-[#ECEDFE] flex items-center justify-center flex-shrink-0">
-                  <svg class="w-[18px] h-[18px] text-[#675DF4]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="11" width="2.5" height="2.5" rx="0.5"/><line x1="13" y1="12.25" x2="16" y2="12.25"/><rect x="8" y="16" width="2.5" height="2.5" rx="0.5"/><line x1="13" y1="17.25" x2="16" y2="17.25"/></svg>
+                <div class="w-[32px] h-[32px] rounded-[8px] bg-[#ecedfe] flex items-center justify-center flex-shrink-0">
+                  <svg class="w-[18px] h-[18px] text-[#4a42c8]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="11" width="2.5" height="2.5" rx="0.5"/><line x1="13" y1="12.25" x2="16" y2="12.25"/><rect x="8" y="16" width="2.5" height="2.5" rx="0.5"/><line x1="13" y1="17.25" x2="16" y2="17.25"/></svg>
                 </div>
                 <div class="flex-1 min-w-0 flex flex-col gap-[2px]">
-                  <div class="text-[14px] font-medium leading-[20px] text-[#1f2533]">9 Feb 2026 / Benito Ocasio</div>
-                  <div class="text-[12px] font-normal leading-[16px] text-[#545f70]">Daily Site Safety Inspection (Melbourne)</div>
+                  <div class="text-[14px] font-medium leading-[20px] text-[#1c1714]">9 Feb 2026 / Benito Ocasio</div>
+                  <div class="text-[12px] font-normal leading-[16px] text-[#7a7674]">Daily Site Safety Inspection (Melbourne)</div>
                 </div>
               </div>
               <div class="px-[16px] py-[8px]">
-                <span class="inline-flex items-center px-[8px] py-[2px] rounded-full text-[12px] leading-[16px] font-medium" style="background:#E5FAFF;color:#0D75B5;">In Progress</span>
+                <span class="inline-flex items-center px-[8px] py-[2px] rounded-full text-[12px] leading-[16px] font-medium" style="background:#deeaff;color:#3060c8;">In Progress</span>
               </div>
               <div class="px-[16px] py-[8px] min-w-[155px]">
-                <span class="text-[14px] font-normal leading-[20px] text-[#1f2533]">3 hours ago</span>
+                <span class="text-[14px] font-normal leading-[20px] text-[#1c1714]">3 hours ago</span>
               </div>
             </div>
             <!-- Row 2 -->
-            <div class="flex items-center border-b border-[#dbe0eb] px-[8px]">
+            <div class="flex items-center border-b border-[#e5e5e5] px-[8px]">
               <div class="flex gap-[8px] items-center p-[16px]" style="width:740px;">
-                <div class="w-[32px] h-[32px] rounded-[8px] bg-[#ECEDFE] flex items-center justify-center flex-shrink-0">
-                  <svg class="w-[18px] h-[18px] text-[#675DF4]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="11" width="2.5" height="2.5" rx="0.5"/><line x1="13" y1="12.25" x2="16" y2="12.25"/><rect x="8" y="16" width="2.5" height="2.5" rx="0.5"/><line x1="13" y1="17.25" x2="16" y2="17.25"/></svg>
+                <div class="w-[32px] h-[32px] rounded-[8px] bg-[#ecedfe] flex items-center justify-center flex-shrink-0">
+                  <svg class="w-[18px] h-[18px] text-[#4a42c8]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="11" width="2.5" height="2.5" rx="0.5"/><line x1="13" y1="12.25" x2="16" y2="12.25"/><rect x="8" y="16" width="2.5" height="2.5" rx="0.5"/><line x1="13" y1="17.25" x2="16" y2="17.25"/></svg>
                 </div>
                 <div class="flex-1 min-w-0 flex flex-col gap-[2px]">
-                  <div class="text-[14px] font-medium leading-[20px] text-[#1f2533]">9 Feb 2026 / Melissa Tran</div>
-                  <div class="text-[12px] font-normal leading-[16px] text-[#545f70]">Daily Site Safety Inspection (Sydney)</div>
+                  <div class="text-[14px] font-medium leading-[20px] text-[#1c1714]">9 Feb 2026 / Melissa Tran</div>
+                  <div class="text-[12px] font-normal leading-[16px] text-[#7a7674]">Daily Site Safety Inspection (Sydney)</div>
                 </div>
               </div>
               <div class="px-[16px] py-[8px]">
-                <span class="inline-flex items-center px-[8px] py-[2px] rounded-full text-[12px] leading-[16px] font-medium" style="background:#E5FAFF;color:#0D75B5;">In Progress</span>
+                <span class="inline-flex items-center px-[8px] py-[2px] rounded-full text-[12px] leading-[16px] font-medium" style="background:#deeaff;color:#3060c8;">In Progress</span>
               </div>
               <div class="px-[16px] py-[8px] min-w-[155px]">
-                <span class="text-[14px] font-normal leading-[20px] text-[#1f2533]">6 hours ago</span>
+                <span class="text-[14px] font-normal leading-[20px] text-[#1c1714]">6 hours ago</span>
               </div>
             </div>
             <!-- Row 3 -->
-            <div class="flex items-center border-b border-[#dbe0eb] px-[8px]">
+            <div class="flex items-center border-b border-[#e5e5e5] px-[8px]">
               <div class="flex gap-[8px] items-center p-[16px]" style="width:740px;">
-                <div class="w-[32px] h-[32px] rounded-[8px] bg-[#ECEDFE] flex items-center justify-center flex-shrink-0">
-                  <svg class="w-[18px] h-[18px] text-[#675DF4]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="11" width="2.5" height="2.5" rx="0.5"/><line x1="13" y1="12.25" x2="16" y2="12.25"/><rect x="8" y="16" width="2.5" height="2.5" rx="0.5"/><line x1="13" y1="17.25" x2="16" y2="17.25"/></svg>
+                <div class="w-[32px] h-[32px] rounded-[8px] bg-[#ecedfe] flex items-center justify-center flex-shrink-0">
+                  <svg class="w-[18px] h-[18px] text-[#4a42c8]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="11" width="2.5" height="2.5" rx="0.5"/><line x1="13" y1="12.25" x2="16" y2="12.25"/><rect x="8" y="16" width="2.5" height="2.5" rx="0.5"/><line x1="13" y1="17.25" x2="16" y2="17.25"/></svg>
                 </div>
                 <div class="flex-1 min-w-0 flex flex-col gap-[2px]">
-                  <div class="text-[14px] font-medium leading-[20px] text-[#1f2533]">8 Feb 2026 / Benito Ocasio</div>
-                  <div class="text-[12px] font-normal leading-[16px] text-[#545f70]">Daily Site Safety Inspection (Melbourne)</div>
+                  <div class="text-[14px] font-medium leading-[20px] text-[#1c1714]">8 Feb 2026 / Benito Ocasio</div>
+                  <div class="text-[12px] font-normal leading-[16px] text-[#7a7674]">Daily Site Safety Inspection (Melbourne)</div>
                 </div>
               </div>
               <div class="px-[16px] py-[8px]">
-                <span class="inline-flex items-center px-[8px] py-[2px] rounded-full text-[12px] leading-[16px] font-medium" style="background:#E8FCF5;color:#007A52;">Completed</span>
+                <span class="inline-flex items-center px-[8px] py-[2px] rounded-full text-[12px] leading-[16px] font-medium" style="background:#d0e9d8;color:#257c42;">Completed</span>
               </div>
               <div class="px-[16px] py-[8px] min-w-[155px]">
-                <span class="text-[14px] font-normal leading-[20px] text-[#1f2533]">1 day ago</span>
+                <span class="text-[14px] font-normal leading-[20px] text-[#1c1714]">1 day ago</span>
               </div>
             </div>
             <!-- Row 4 -->
-            <div class="flex items-center border-b border-[#dbe0eb] px-[8px]">
+            <div class="flex items-center border-b border-[#e5e5e5] px-[8px]">
               <div class="flex gap-[8px] items-center p-[16px]" style="width:740px;">
-                <div class="w-[32px] h-[32px] rounded-[8px] bg-[#ECEDFE] flex items-center justify-center flex-shrink-0">
-                  <svg class="w-[18px] h-[18px] text-[#675DF4]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="11" width="2.5" height="2.5" rx="0.5"/><line x1="13" y1="12.25" x2="16" y2="12.25"/><rect x="8" y="16" width="2.5" height="2.5" rx="0.5"/><line x1="13" y1="17.25" x2="16" y2="17.25"/></svg>
+                <div class="w-[32px] h-[32px] rounded-[8px] bg-[#ecedfe] flex items-center justify-center flex-shrink-0">
+                  <svg class="w-[18px] h-[18px] text-[#4a42c8]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="11" width="2.5" height="2.5" rx="0.5"/><line x1="13" y1="12.25" x2="16" y2="12.25"/><rect x="8" y="16" width="2.5" height="2.5" rx="0.5"/><line x1="13" y1="17.25" x2="16" y2="17.25"/></svg>
                 </div>
                 <div class="flex-1 min-w-0 flex flex-col gap-[2px]">
-                  <div class="text-[14px] font-medium leading-[20px] text-[#1f2533]">8 Feb 2026 / Melissa Tran</div>
-                  <div class="text-[12px] font-normal leading-[16px] text-[#545f70]">Daily Site Safety Inspection (Sydney)</div>
+                  <div class="text-[14px] font-medium leading-[20px] text-[#1c1714]">8 Feb 2026 / Melissa Tran</div>
+                  <div class="text-[12px] font-normal leading-[16px] text-[#7a7674]">Daily Site Safety Inspection (Sydney)</div>
                 </div>
               </div>
               <div class="px-[16px] py-[8px]">
-                <span class="inline-flex items-center px-[8px] py-[2px] rounded-full text-[12px] leading-[16px] font-medium" style="background:#E8FCF5;color:#007A52;">Completed</span>
+                <span class="inline-flex items-center px-[8px] py-[2px] rounded-full text-[12px] leading-[16px] font-medium" style="background:#d0e9d8;color:#257c42;">Completed</span>
               </div>
               <div class="px-[16px] py-[8px] min-w-[155px]">
-                <span class="text-[14px] font-normal leading-[20px] text-[#1f2533]">1 day ago</span>
+                <span class="text-[14px] font-normal leading-[20px] text-[#1c1714]">1 day ago</span>
               </div>
             </div>
             <!-- Row 5 -->
-            <div class="flex items-center border-b border-[#dbe0eb] px-[8px]">
+            <div class="flex items-center border-b border-[#e5e5e5] px-[8px]">
               <div class="flex gap-[8px] items-center p-[16px]" style="width:740px;">
-                <div class="w-[32px] h-[32px] rounded-[8px] bg-[#ECEDFE] flex items-center justify-center flex-shrink-0">
-                  <svg class="w-[18px] h-[18px] text-[#675DF4]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="11" width="2.5" height="2.5" rx="0.5"/><line x1="13" y1="12.25" x2="16" y2="12.25"/><rect x="8" y="16" width="2.5" height="2.5" rx="0.5"/><line x1="13" y1="17.25" x2="16" y2="17.25"/></svg>
+                <div class="w-[32px] h-[32px] rounded-[8px] bg-[#ecedfe] flex items-center justify-center flex-shrink-0">
+                  <svg class="w-[18px] h-[18px] text-[#4a42c8]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="11" width="2.5" height="2.5" rx="0.5"/><line x1="13" y1="12.25" x2="16" y2="12.25"/><rect x="8" y="16" width="2.5" height="2.5" rx="0.5"/><line x1="13" y1="17.25" x2="16" y2="17.25"/></svg>
                 </div>
                 <div class="flex-1 min-w-0 flex flex-col gap-[2px]">
-                  <div class="text-[14px] font-medium leading-[20px] text-[#1f2533]">7 Feb 2026 / Benito Ocasio</div>
-                  <div class="text-[12px] font-normal leading-[16px] text-[#545f70]">Daily Site Safety Inspection (Melbourne)</div>
+                  <div class="text-[14px] font-medium leading-[20px] text-[#1c1714]">7 Feb 2026 / Benito Ocasio</div>
+                  <div class="text-[12px] font-normal leading-[16px] text-[#7a7674]">Daily Site Safety Inspection (Melbourne)</div>
                 </div>
               </div>
               <div class="px-[16px] py-[8px]">
-                <span class="inline-flex items-center px-[8px] py-[2px] rounded-full text-[12px] leading-[16px] font-medium" style="background:#E8FCF5;color:#007A52;">Completed</span>
+                <span class="inline-flex items-center px-[8px] py-[2px] rounded-full text-[12px] leading-[16px] font-medium" style="background:#d0e9d8;color:#257c42;">Completed</span>
               </div>
               <div class="px-[16px] py-[8px] min-w-[155px]">
-                <span class="text-[14px] font-normal leading-[20px] text-[#1f2533]">2 days ago</span>
+                <span class="text-[14px] font-normal leading-[20px] text-[#1c1714]">2 days ago</span>
               </div>
             </div>
             <!-- Row 6 -->
             <div class="flex items-center px-[8px]">
               <div class="flex gap-[8px] items-center p-[16px]" style="width:740px;">
-                <div class="w-[32px] h-[32px] rounded-[8px] bg-[#ECEDFE] flex items-center justify-center flex-shrink-0">
-                  <svg class="w-[18px] h-[18px] text-[#675DF4]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="11" width="2.5" height="2.5" rx="0.5"/><line x1="13" y1="12.25" x2="16" y2="12.25"/><rect x="8" y="16" width="2.5" height="2.5" rx="0.5"/><line x1="13" y1="17.25" x2="16" y2="17.25"/></svg>
+                <div class="w-[32px] h-[32px] rounded-[8px] bg-[#ecedfe] flex items-center justify-center flex-shrink-0">
+                  <svg class="w-[18px] h-[18px] text-[#4a42c8]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="11" width="2.5" height="2.5" rx="0.5"/><line x1="13" y1="12.25" x2="16" y2="12.25"/><rect x="8" y="16" width="2.5" height="2.5" rx="0.5"/><line x1="13" y1="17.25" x2="16" y2="17.25"/></svg>
                 </div>
                 <div class="flex-1 min-w-0 flex flex-col gap-[2px]">
-                  <div class="text-[14px] font-medium leading-[20px] text-[#1f2533]">7 Feb 2026 / Melissa Tran</div>
-                  <div class="text-[12px] font-normal leading-[16px] text-[#545f70]">Daily Site Safety Inspection (Sydney)</div>
+                  <div class="text-[14px] font-medium leading-[20px] text-[#1c1714]">7 Feb 2026 / Melissa Tran</div>
+                  <div class="text-[12px] font-normal leading-[16px] text-[#7a7674]">Daily Site Safety Inspection (Sydney)</div>
                 </div>
               </div>
               <div class="px-[16px] py-[8px]">
-                <span class="inline-flex items-center px-[8px] py-[2px] rounded-full text-[12px] leading-[16px] font-medium" style="background:#E8FCF5;color:#007A52;">Completed</span>
+                <span class="inline-flex items-center px-[8px] py-[2px] rounded-full text-[12px] leading-[16px] font-medium" style="background:#d0e9d8;color:#257c42;">Completed</span>
               </div>
               <div class="px-[16px] py-[8px] min-w-[155px]">
-                <span class="text-[14px] font-normal leading-[20px] text-[#1f2533]">2 days ago</span>
+                <span class="text-[14px] font-normal leading-[20px] text-[#1c1714]">2 days ago</span>
               </div>
             </div>
           </div>
@@ -915,18 +915,18 @@
           <div class="flex items-center gap-s3">
             <div class="glass h-11 flex items-center gap-[12px] px-[4px]" style="border-radius:296px;">
               <div class="w-[36px] h-[36px] flex items-center justify-center rounded-full">
-                <svg class="w-[22px] h-[22px] text-[#1f2533]" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16M7 12h10M10 18h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+                <svg class="w-[22px] h-[22px] text-[#1c1714]" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16M7 12h10M10 18h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
               </div>
               <div class="w-[36px] h-[36px] flex items-center justify-center rounded-full">
-                <svg class="w-[22px] h-[22px] text-[#1f2533]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4v16m0 0l-3-3m3 3l3-3M17 20V4m0 0l3 3m-3-3l-3 3"/></svg>
+                <svg class="w-[22px] h-[22px] text-[#1c1714]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4v16m0 0l-3-3m3 3l3-3M17 20V4m0 0l3 3m-3-3l-3 3"/></svg>
               </div>
               <div class="w-[36px] h-[36px] flex items-center justify-center rounded-full">
-                <svg class="w-[22px] h-[22px] text-[#1f2533]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                <svg class="w-[22px] h-[22px] text-[#1c1714]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
               </div>
             </div>
             <div class="glass-search flex items-center gap-s1 h-11 pl-[11px] pr-[10px] min-w-[180px]">
-              <svg class="w-[18px] h-[18px] text-[#404040] flex-shrink-0" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.2931 2.37207C5.96319 2.37207 2.45312 5.88213 2.45312 10.212C2.45312 14.5419 5.96319 18.052 10.2931 18.052C12.0558 18.052 13.6826 17.4702 14.992 16.4883L19.8393 21.3355C20.2298 21.726 20.863 21.726 21.2535 21.3355C21.644 20.945 21.644 20.3118 21.2535 19.9213L16.4271 15.0949C17.4949 13.7554 18.133 12.0582 18.133 10.212C18.133 5.88213 14.6229 2.37207 10.2931 2.37207ZM4.45312 10.212C4.45312 6.9867 7.06776 4.37207 10.2931 4.37207C13.5184 4.37207 16.133 6.9867 16.133 10.212C16.133 13.4373 13.5184 16.052 10.2931 16.052C7.06776 16.052 4.45312 13.4373 4.45312 10.212Z" fill="currentColor"/></svg>
-              <input type="search" placeholder="Search" class="flex-1 text-[17px] font-medium placeholder:text-[#b0b0b0] text-[#404040] outline-none bg-transparent leading-5">
+              <svg class="w-[18px] h-[18px] text-[#1c1714] flex-shrink-0" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.2931 2.37207C5.96319 2.37207 2.45312 5.88213 2.45312 10.212C2.45312 14.5419 5.96319 18.052 10.2931 18.052C12.0558 18.052 13.6826 17.4702 14.992 16.4883L19.8393 21.3355C20.2298 21.726 20.863 21.726 21.2535 21.3355C21.644 20.945 21.644 20.3118 21.2535 19.9213L16.4271 15.0949C17.4949 13.7554 18.133 12.0582 18.133 10.212C18.133 5.88213 14.6229 2.37207 10.2931 2.37207ZM4.45312 10.212C4.45312 6.9867 7.06776 4.37207 10.2931 4.37207C13.5184 4.37207 16.133 6.9867 16.133 10.212C16.133 13.4373 13.5184 16.052 10.2931 16.052C7.06776 16.052 4.45312 13.4373 4.45312 10.212Z" fill="currentColor"/></svg>
+              <input type="search" placeholder="Search" class="flex-1 text-[17px] font-medium placeholder:text-[#bcb8b8] text-[#1c1714] outline-none bg-transparent leading-5">
             </div>
             <button class="focus-ring w-11 h-11 rounded-full bg-accent text-white flex items-center justify-center hover:bg-accent-hover transition-colors" aria-label="Create action">
               <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
@@ -937,145 +937,145 @@
         <!-- Split view -->
         <div class="flex-1 flex min-h-0">
           <!-- Left: Action list -->
-          <div class="flex-1 overflow-y-auto py-s6 border-r border-[#DBE0EB]" style="padding-left:28px;padding-right:28px;">
+          <div class="flex-1 overflow-y-auto py-s6 border-r border-[#e5e5e5]" style="padding-left:28px;padding-right:28px;">
             <!-- Filter tags -->
             <div class="flex items-center gap-[8px] mb-s5">
-              <div class="flex items-center px-s3 py-[5px] rounded-full text-label-medium text-[#1f2533] border border-[#DBE0EB]">Assigned to me</div>
-              <div class="flex items-center px-s3 py-[5px] rounded-full text-label-medium text-[#1f2533] border border-[#DBE0EB]">Overdue</div>
+              <div class="flex items-center px-s3 py-[5px] rounded-full text-label-medium text-[#1c1714] border border-[#e5e5e5]">Assigned to me</div>
+              <div class="flex items-center px-s3 py-[5px] rounded-full text-label-medium text-[#1c1714] border border-[#e5e5e5]">Overdue</div>
             </div>
 
             <!-- Action list -->
             <div class="flex flex-col max-w-[680px]">
             <!-- Action 1 -->
-            <div class="py-[12px] border-b border-[#DBE0EB]">
-              <div class="text-label-medium text-[#1f2533] mb-[4px]">Restock inventory April</div>
+            <div class="py-[12px] border-b border-[#e5e5e5]">
+              <div class="text-label-medium text-[#1c1714] mb-[4px]">Restock inventory April</div>
               <div class="flex items-center justify-between">
                 <div class="flex items-center gap-[8px]">
                   <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=40&h=40&fit=crop&crop=face" class="w-[20px] h-[20px] rounded-full object-cover flex-shrink-0" alt="" />
-                  <div class="flex items-center gap-[4px] text-[12px] leading-[16px] text-[#545f70]" style="font-weight:400;">
+                  <div class="flex items-center gap-[4px] text-[12px] leading-[16px] text-[#7a7674]" style="font-weight:400;">
                     <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M8 2C8.55228 2 9 2.44772 9 3V4H15V3C15 2.44772 15.4477 2 16 2C16.5523 2 17 2.44772 17 3V4H19C20.1046 4 21 4.89543 21 6V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20V6C3 4.89543 3.89543 4 5 4H7V3C7 2.44772 7.44772 2 8 2ZM5 10V20H19V10H5Z"/></svg>
                     <span>Apr 20</span>
                   </div>
-                  <div class="flex items-center gap-[2px] text-label-small text-[#BD5800]">
+                  <div class="flex items-center gap-[2px] text-label-small text-[#a86010]">
                     <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" transform="rotate(-90 12 12)"/></svg>
                     <span>Medium</span>
                   </div>
                 </div>
-                <span class="inline-flex items-center px-[8px] py-[2px] rounded-full text-[12px] leading-[16px] font-medium" style="background:#E5FAFF;color:#0D75B5;">In Progress</span>
+                <span class="inline-flex items-center px-[8px] py-[2px] rounded-full text-[12px] leading-[16px] font-medium" style="background:#deeaff;color:#3060c8;">In Progress</span>
               </div>
             </div>
             <!-- Action 2 -->
-            <div class="py-[12px] border-b border-[#DBE0EB]">
-              <div class="text-label-medium text-[#1f2533] mb-[4px]">Schedule maintenance for forklifts</div>
+            <div class="py-[12px] border-b border-[#e5e5e5]">
+              <div class="text-label-medium text-[#1c1714] mb-[4px]">Schedule maintenance for forklifts</div>
               <div class="flex items-center justify-between">
                 <div class="flex items-center gap-[8px]">
                   <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" class="w-[20px] h-[20px] rounded-full object-cover flex-shrink-0" alt="" />
-                  <div class="flex items-center gap-[4px] text-[12px] leading-[16px] text-[#545f70]" style="font-weight:400;">
+                  <div class="flex items-center gap-[4px] text-[12px] leading-[16px] text-[#7a7674]" style="font-weight:400;">
                     <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M8 2C8.55228 2 9 2.44772 9 3V4H15V3C15 2.44772 15.4477 2 16 2C16.5523 2 17 2.44772 17 3V4H19C20.1046 4 21 4.89543 21 6V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20V6C3 4.89543 3.89543 4 5 4H7V3C7 2.44772 7.44772 2 8 2ZM5 10V20H19V10H5Z"/></svg>
                     <span>Apr 20</span>
                   </div>
                 </div>
-                <span class="inline-flex items-center px-[8px] py-[2px] rounded-full text-[12px] leading-[16px] font-medium" style="background:#FFF3EB;color:#9E4A00;">To Do</span>
+                <span class="inline-flex items-center px-[8px] py-[2px] rounded-full text-[12px] leading-[16px] font-medium" style="background:#feeac6;color:#643804;">To Do</span>
               </div>
             </div>
             <!-- Action 3 -->
-            <div class="py-[12px] border-b border-[#DBE0EB]">
-              <div class="text-label-medium text-[#1f2533] mb-[4px]">Update shipping logs for December</div>
+            <div class="py-[12px] border-b border-[#e5e5e5]">
+              <div class="text-label-medium text-[#1c1714] mb-[4px]">Update shipping logs for December</div>
               <div class="flex items-center justify-between">
                 <div class="flex items-center gap-[8px]">
                   <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop&crop=face" class="w-[20px] h-[20px] rounded-full object-cover flex-shrink-0" alt="" />
-                  <div class="flex items-center gap-[4px] text-[12px] leading-[16px] text-[#545f70]" style="font-weight:400;">
+                  <div class="flex items-center gap-[4px] text-[12px] leading-[16px] text-[#7a7674]" style="font-weight:400;">
                     <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M8 2C8.55228 2 9 2.44772 9 3V4H15V3C15 2.44772 15.4477 2 16 2C16.5523 2 17 2.44772 17 3V4H19C20.1046 4 21 4.89543 21 6V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20V6C3 4.89543 3.89543 4 5 4H7V3C7 2.44772 7.44772 2 8 2ZM5 10V20H19V10H5Z"/></svg>
                     <span>Apr 2</span>
                   </div>
-                  <div class="flex items-center gap-[2px] text-label-small text-[#A8242A]">
+                  <div class="flex items-center gap-[2px] text-label-small text-[#b02010]">
                     <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" transform="rotate(-90 12 12)"/></svg>
                     <span>High</span>
                   </div>
                 </div>
-                <span class="inline-flex items-center px-[8px] py-[2px] rounded-full text-[12px] leading-[16px] font-medium" style="background:#FFF3EB;color:#9E4A00;">To Do</span>
+                <span class="inline-flex items-center px-[8px] py-[2px] rounded-full text-[12px] leading-[16px] font-medium" style="background:#feeac6;color:#643804;">To Do</span>
               </div>
             </div>
             <!-- Action 4 -->
-            <div class="py-[12px] border-b border-[#DBE0EB]">
-              <div class="text-label-medium text-[#1f2533] mb-[4px]">Conduct weekly safety check</div>
+            <div class="py-[12px] border-b border-[#e5e5e5]">
+              <div class="text-label-medium text-[#1c1714] mb-[4px]">Conduct weekly safety check</div>
               <div class="flex items-center justify-between">
                 <div class="flex items-center gap-[8px]">
                   <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=40&h=40&fit=crop&crop=face" class="w-[20px] h-[20px] rounded-full object-cover flex-shrink-0" alt="" />
-                  <div class="flex items-center gap-[4px] text-[12px] leading-[16px] text-[#545f70]" style="font-weight:400;">
+                  <div class="flex items-center gap-[4px] text-[12px] leading-[16px] text-[#7a7674]" style="font-weight:400;">
                     <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M8 2C8.55228 2 9 2.44772 9 3V4H15V3C15 2.44772 15.4477 2 16 2C16.5523 2 17 2.44772 17 3V4H19C20.1046 4 21 4.89543 21 6V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20V6C3 4.89543 3.89543 4 5 4H7V3C7 2.44772 7.44772 2 8 2ZM5 10V20H19V10H5Z"/></svg>
                     <span>Apr 19</span>
                   </div>
                 </div>
-                <span class="inline-flex items-center px-[8px] py-[2px] rounded-full text-[12px] leading-[16px] font-medium" style="background:#FFF3EB;color:#9E4A00;">To Do</span>
+                <span class="inline-flex items-center px-[8px] py-[2px] rounded-full text-[12px] leading-[16px] font-medium" style="background:#feeac6;color:#643804;">To Do</span>
               </div>
             </div>
             <!-- Action 5 -->
-            <div class="py-[12px] border-b border-[#DBE0EB]">
-              <div class="text-label-medium text-[#1f2533] mb-[4px]">Organize packaging supplies</div>
+            <div class="py-[12px] border-b border-[#e5e5e5]">
+              <div class="text-label-medium text-[#1c1714] mb-[4px]">Organize packaging supplies</div>
               <div class="flex items-center justify-between">
                 <div class="flex items-center gap-[8px]">
                   <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" class="w-[20px] h-[20px] rounded-full object-cover flex-shrink-0" alt="" />
-                  <div class="flex items-center gap-[4px] text-[12px] leading-[16px] text-[#545f70]" style="font-weight:400;">
+                  <div class="flex items-center gap-[4px] text-[12px] leading-[16px] text-[#7a7674]" style="font-weight:400;">
                     <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M8 2C8.55228 2 9 2.44772 9 3V4H15V3C15 2.44772 15.4477 2 16 2C16.5523 2 17 2.44772 17 3V4H19C20.1046 4 21 4.89543 21 6V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20V6C3 4.89543 3.89543 4 5 4H7V3C7 2.44772 7.44772 2 8 2ZM5 10V20H19V10H5Z"/></svg>
                     <span>Apr 20</span>
                   </div>
-                  <div class="flex items-center gap-[2px] text-label-small text-[#007A52]">
+                  <div class="flex items-center gap-[2px] text-label-small text-[#257c42]">
                     <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" transform="rotate(90 12 12)"/></svg>
                     <span>Low</span>
                   </div>
                 </div>
-                <span class="inline-flex items-center px-[8px] py-[2px] rounded-full text-[12px] leading-[16px] font-medium" style="background:#E8FCF5;color:#007A52;">Complete</span>
+                <span class="inline-flex items-center px-[8px] py-[2px] rounded-full text-[12px] leading-[16px] font-medium" style="background:#d0e9d8;color:#257c42;">Complete</span>
               </div>
             </div>
             <!-- Action 6 -->
-            <div class="py-[12px] border-b border-[#DBE0EB]">
-              <div class="text-label-medium text-[#1f2533] mb-[4px]">Prepare for annual inventory audit</div>
+            <div class="py-[12px] border-b border-[#e5e5e5]">
+              <div class="text-label-medium text-[#1c1714] mb-[4px]">Prepare for annual inventory audit</div>
               <div class="flex items-center justify-between">
                 <div class="flex items-center gap-[8px]">
                   <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=40&h=40&fit=crop&crop=face" class="w-[20px] h-[20px] rounded-full object-cover flex-shrink-0" alt="" />
-                  <div class="flex items-center gap-[4px] text-[12px] leading-[16px] text-[#545f70]" style="font-weight:400;">
+                  <div class="flex items-center gap-[4px] text-[12px] leading-[16px] text-[#7a7674]" style="font-weight:400;">
                     <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M8 2C8.55228 2 9 2.44772 9 3V4H15V3C15 2.44772 15.4477 2 16 2C16.5523 2 17 2.44772 17 3V4H19C20.1046 4 21 4.89543 21 6V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20V6C3 4.89543 3.89543 4 5 4H7V3C7 2.44772 7.44772 2 8 2ZM5 10V20H19V10H5Z"/></svg>
                     <span>Apr 20</span>
                   </div>
                 </div>
-                <span class="inline-flex items-center px-[8px] py-[2px] rounded-full text-[12px] leading-[16px] font-medium" style="background:#FFF3EB;color:#9E4A00;">To Do</span>
+                <span class="inline-flex items-center px-[8px] py-[2px] rounded-full text-[12px] leading-[16px] font-medium" style="background:#feeac6;color:#643804;">To Do</span>
               </div>
             </div>
             <!-- Action 7 -->
-            <div class="py-[12px] border-b border-[#DBE0EB]">
-              <div class="text-label-medium text-[#1f2533] mb-[4px]">Train new warehouse staff</div>
+            <div class="py-[12px] border-b border-[#e5e5e5]">
+              <div class="text-label-medium text-[#1c1714] mb-[4px]">Train new warehouse staff</div>
               <div class="flex items-center justify-between">
                 <div class="flex items-center gap-[8px]">
                   <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" class="w-[20px] h-[20px] rounded-full object-cover flex-shrink-0" alt="" />
-                  <div class="flex items-center gap-[4px] text-[12px] leading-[16px] text-[#545f70]" style="font-weight:400;">
+                  <div class="flex items-center gap-[4px] text-[12px] leading-[16px] text-[#7a7674]" style="font-weight:400;">
                     <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M8 2C8.55228 2 9 2.44772 9 3V4H15V3C15 2.44772 15.4477 2 16 2C16.5523 2 17 2.44772 17 3V4H19C20.1046 4 21 4.89543 21 6V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20V6C3 4.89543 3.89543 4 5 4H7V3C7 2.44772 7.44772 2 8 2ZM5 10V20H19V10H5Z"/></svg>
                     <span>May 2</span>
                   </div>
-                  <div class="flex items-center gap-[2px] text-label-small text-[#BD5800]">
+                  <div class="flex items-center gap-[2px] text-label-small text-[#a86010]">
                     <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" transform="rotate(-90 12 12)"/></svg>
                     <span>Medium</span>
                   </div>
                 </div>
-                <span class="inline-flex items-center px-[8px] py-[2px] rounded-full text-[12px] leading-[16px] font-medium" style="background:#FFF3EB;color:#9E4A00;">To Do</span>
+                <span class="inline-flex items-center px-[8px] py-[2px] rounded-full text-[12px] leading-[16px] font-medium" style="background:#feeac6;color:#643804;">To Do</span>
               </div>
             </div>
             <!-- Action 8 -->
-            <div class="py-[12px] border-b border-[#DBE0EB]">
-              <div class="text-label-medium text-[#1f2533] mb-[4px]">Review supplier contracts</div>
+            <div class="py-[12px] border-b border-[#e5e5e5]">
+              <div class="text-label-medium text-[#1c1714] mb-[4px]">Review supplier contracts</div>
               <div class="flex items-center justify-between">
                 <div class="flex items-center gap-[8px]">
                   <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=40&h=40&fit=crop&crop=face" class="w-[20px] h-[20px] rounded-full object-cover flex-shrink-0" alt="" />
-                  <div class="flex items-center gap-[4px] text-[12px] leading-[16px] text-[#545f70]" style="font-weight:400;">
+                  <div class="flex items-center gap-[4px] text-[12px] leading-[16px] text-[#7a7674]" style="font-weight:400;">
                     <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M8 2C8.55228 2 9 2.44772 9 3V4H15V3C15 2.44772 15.4477 2 16 2C16.5523 2 17 2.44772 17 3V4H19C20.1046 4 21 4.89543 21 6V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20V6C3 4.89543 3.89543 4 5 4H7V3C7 2.44772 7.44772 2 8 2ZM5 10V20H19V10H5Z"/></svg>
                     <span>Apr 20</span>
                   </div>
-                  <div class="flex items-center gap-[2px] text-label-small text-[#A8242A]">
+                  <div class="flex items-center gap-[2px] text-label-small text-[#b02010]">
                     <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" transform="rotate(-90 12 12)"/></svg>
                     <span>High</span>
                   </div>
                 </div>
-                <span class="inline-flex items-center px-[8px] py-[2px] rounded-full text-[12px] leading-[16px] font-medium" style="background:#FFF3EB;color:#9E4A00;">To Do</span>
+                <span class="inline-flex items-center px-[8px] py-[2px] rounded-full text-[12px] leading-[16px] font-medium" style="background:#feeac6;color:#643804;">To Do</span>
               </div>
             </div>
             </div>
@@ -1088,47 +1088,47 @@
               <div class="relative w-[180px] h-[180px]">
                 <!-- Back-left card (tilted -20deg) -->
                 <div class="absolute" style="top:22px; left:7px; width:67px; height:90px; transform:rotate(-20deg);">
-                  <div style="width:100%;height:100%;border-radius:8px;background:#fff;border:1px solid #DBE0EB;box-shadow:0 2px 8px rgba(0,0,0,0.08);overflow:hidden;">
-                    <div style="height:24px;background:#EEF1F7;border-bottom:1px solid #DBE0EB;"></div>
+                  <div style="width:100%;height:100%;border-radius:8px;background:#fff;border:1px solid #e5e5e5;box-shadow:0 2px 8px rgba(0,0,0,0.08);overflow:hidden;">
+                    <div style="height:24px;background:#f9f8f8;border-bottom:1px solid #e5e5e5;"></div>
                     <div style="padding:8px;">
-                      <div style="height:4px;background:#E9EDF6;border-radius:2px;margin-bottom:4px;width:80%;"></div>
-                      <div style="height:4px;background:#E9EDF6;border-radius:2px;margin-bottom:4px;width:60%;"></div>
-                      <div style="height:4px;background:#E9EDF6;border-radius:2px;width:70%;"></div>
+                      <div style="height:4px;background:#e9e7e7;border-radius:2px;margin-bottom:4px;width:80%;"></div>
+                      <div style="height:4px;background:#e9e7e7;border-radius:2px;margin-bottom:4px;width:60%;"></div>
+                      <div style="height:4px;background:#e9e7e7;border-radius:2px;width:70%;"></div>
                     </div>
                   </div>
                 </div>
                 <!-- Back-right card (tilted 20deg) -->
                 <div class="absolute" style="top:60px; right:7px; width:67px; height:90px; transform:rotate(20deg);">
-                  <div style="width:100%;height:100%;border-radius:8px;background:#fff;border:1px solid #DBE0EB;box-shadow:0 2px 8px rgba(0,0,0,0.08);overflow:hidden;">
-                    <div style="height:24px;background:#E0E4FF;border-bottom:1px solid #DBE0EB;"></div>
+                  <div style="width:100%;height:100%;border-radius:8px;background:#fff;border:1px solid #e5e5e5;box-shadow:0 2px 8px rgba(0,0,0,0.08);overflow:hidden;">
+                    <div style="height:24px;background:#e6e4f8;border-bottom:1px solid #e5e5e5;"></div>
                     <div style="padding:8px;">
-                      <div style="height:4px;background:#E9EDF6;border-radius:2px;margin-bottom:4px;width:80%;"></div>
-                      <div style="height:4px;background:#E9EDF6;border-radius:2px;margin-bottom:4px;width:50%;"></div>
-                      <div style="height:4px;background:#E9EDF6;border-radius:2px;width:65%;"></div>
+                      <div style="height:4px;background:#e9e7e7;border-radius:2px;margin-bottom:4px;width:80%;"></div>
+                      <div style="height:4px;background:#e9e7e7;border-radius:2px;margin-bottom:4px;width:50%;"></div>
+                      <div style="height:4px;background:#e9e7e7;border-radius:2px;width:65%;"></div>
                     </div>
                   </div>
                   <!-- Small teal checkmark badge -->
-                  <div class="absolute -top-[6px] -right-[6px] w-[20px] h-[20px] rounded-full bg-[#00875a] flex items-center justify-center">
+                  <div class="absolute -top-[6px] -right-[6px] w-[20px] h-[20px] rounded-full bg-[#257c42] flex items-center justify-center">
                     <svg class="w-[12px] h-[12px] text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                   </div>
                 </div>
                 <!-- Front center card -->
                 <div class="absolute" style="top:44px; left:50%; transform:translateX(-50%); width:61px; height:88px;">
-                  <div style="width:100%;height:100%;border-radius:8px;background:#fff;border:1px solid #DBE0EB;box-shadow:0 4px 12px rgba(0,0,0,0.1);overflow:hidden;">
-                    <div style="height:24px;background:#E5FAFF;border-bottom:1px solid #DBE0EB;"></div>
+                  <div style="width:100%;height:100%;border-radius:8px;background:#fff;border:1px solid #e5e5e5;box-shadow:0 4px 12px rgba(0,0,0,0.1);overflow:hidden;">
+                    <div style="height:24px;background:#deeaff;border-bottom:1px solid #e5e5e5;"></div>
                     <div style="padding:8px;">
-                      <div style="height:4px;background:#E9EDF6;border-radius:2px;margin-bottom:4px;width:80%;"></div>
-                      <div style="height:4px;background:#E9EDF6;border-radius:2px;margin-bottom:4px;width:60%;"></div>
-                      <div style="height:4px;background:#E9EDF6;border-radius:2px;width:70%;"></div>
+                      <div style="height:4px;background:#e9e7e7;border-radius:2px;margin-bottom:4px;width:80%;"></div>
+                      <div style="height:4px;background:#e9e7e7;border-radius:2px;margin-bottom:4px;width:60%;"></div>
+                      <div style="height:4px;background:#e9e7e7;border-radius:2px;width:70%;"></div>
                     </div>
                   </div>
                 </div>
                 <!-- Question mark -->
                 <div class="absolute" style="top:38px; left:54px;">
-                  <span style="font-size:22px;color:#6559ff;font-weight:700;">?</span>
+                  <span style="font-size:22px;color:#4a42c8;font-weight:700;">?</span>
                 </div>
               </div>
-              <p class="text-[14px] font-normal leading-[20px] text-[#545f70] text-center">Select any action to get started</p>
+              <p class="text-[14px] font-normal leading-[20px] text-[#7a7674] text-center">Select any action to get started</p>
             </div>
           </div>
         </div>
@@ -1144,13 +1144,13 @@
     <div class="p-s4">
       <div class="text-title-small text-surface-text mb-s3">Organizations</div>
       <div class="glass-search flex items-center gap-s1 h-9 pl-[10px] pr-[8px] mb-s3" style="box-shadow: 0px 2px 8px rgba(0,0,0,0.06);">
-        <svg class="w-4 h-4 text-[#808080] flex-shrink-0" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.2931 2.37207C5.96319 2.37207 2.45312 5.88213 2.45312 10.212C2.45312 14.5419 5.96319 18.052 10.2931 18.052C12.0558 18.052 13.6826 17.4702 14.992 16.4883L19.8393 21.3355C20.2298 21.726 20.863 21.726 21.2535 21.3355C21.644 20.945 21.644 20.3118 21.2535 19.9213L16.4271 15.0949C17.4949 13.7554 18.133 12.0582 18.133 10.212C18.133 5.88213 14.6229 2.37207 10.2931 2.37207ZM4.45312 10.212C4.45312 6.9867 7.06776 4.37207 10.2931 4.37207C13.5184 4.37207 16.133 6.9867 16.133 10.212C16.133 13.4373 13.5184 16.052 10.2931 16.052C7.06776 16.052 4.45312 13.4373 4.45312 10.212Z" fill="currentColor"/></svg>
-        <input type="text" placeholder="Search" class="flex-1 text-[14px] placeholder:text-[#b0b0b0] text-[#404040] outline-none bg-transparent">
+        <svg class="w-4 h-4 text-[#7a7674] flex-shrink-0" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.2931 2.37207C5.96319 2.37207 2.45312 5.88213 2.45312 10.212C2.45312 14.5419 5.96319 18.052 10.2931 18.052C12.0558 18.052 13.6826 17.4702 14.992 16.4883L19.8393 21.3355C20.2298 21.726 20.863 21.726 21.2535 21.3355C21.644 20.945 21.644 20.3118 21.2535 19.9213L16.4271 15.0949C17.4949 13.7554 18.133 12.0582 18.133 10.212C18.133 5.88213 14.6229 2.37207 10.2931 2.37207ZM4.45312 10.212C4.45312 6.9867 7.06776 4.37207 10.2931 4.37207C13.5184 4.37207 16.133 6.9867 16.133 10.212C16.133 13.4373 13.5184 16.052 10.2931 16.052C7.06776 16.052 4.45312 13.4373 4.45312 10.212Z" fill="currentColor"/></svg>
+        <input type="text" placeholder="Search" class="flex-1 text-[14px] placeholder:text-[#bcb8b8] text-[#1c1714] outline-none bg-transparent">
       </div>
       <div class="space-y-s1">
         <!-- Crestwood (selected) -->
         <div class="flex items-center gap-s3 px-s2 py-s2 rounded-small bg-accent-weakest cursor-pointer">
-          <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=40&h=40&fit=crop&crop=center" alt="Crestwood" class="w-8 h-8 rounded-[6px] object-cover flex-shrink-0" onerror="this.outerHTML='<div class=\'w-8 h-8 rounded-[6px] bg-[#1a3a2a] flex items-center justify-center flex-shrink-0\'><span class=\'text-[#c8e6d8] text-[11px] font-semibold\'>CW</span></div>'" />
+          <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=40&h=40&fit=crop&crop=center" alt="Crestwood" class="w-8 h-8 rounded-[6px] object-cover flex-shrink-0" onerror="this.outerHTML='<div class=\'w-8 h-8 rounded-[6px] bg-[#144524] flex items-center justify-center flex-shrink-0\'><span class=\'text-[#d0e9d8] text-[11px] font-semibold\'>CW</span></div>'" />
           <div class="flex-1 min-w-0">
             <div class="text-label-small text-surface-text font-semibold">Crestwood</div>
           </div>
@@ -1158,8 +1158,8 @@
         </div>
         <!-- Harland Ridge -->
         <div class="flex items-center gap-s3 px-s2 py-s2 rounded-small hover:bg-surface-hover cursor-pointer transition-colors">
-          <div class="w-8 h-8 rounded-[6px] bg-[#2a3a4a] flex items-center justify-center flex-shrink-0">
-            <span class="text-[#a8c8e0] text-[11px] font-semibold">HR</span>
+          <div class="w-8 h-8 rounded-[6px] bg-[#123070] flex items-center justify-center flex-shrink-0">
+            <span class="text-[#6890e6] text-[11px] font-semibold">HR</span>
           </div>
           <div class="flex-1 min-w-0">
             <div class="text-label-small text-surface-text">Harland Ridge</div>
@@ -1167,8 +1167,8 @@
         </div>
         <!-- Soltera Product Group -->
         <div class="flex items-center gap-s3 px-s2 py-s2 rounded-small hover:bg-surface-hover cursor-pointer transition-colors">
-          <div class="w-8 h-8 rounded-[6px] bg-[#4a2a3a] flex items-center justify-center flex-shrink-0">
-            <span class="text-[#e0a8c8] text-[11px] font-semibold">SP</span>
+          <div class="w-8 h-8 rounded-[6px] bg-[#701106] flex items-center justify-center flex-shrink-0">
+            <span class="text-[#f9d8d0] text-[11px] font-semibold">SP</span>
           </div>
           <div class="flex-1 min-w-0">
             <div class="text-label-small text-surface-text">Soltera Product Group</div>
@@ -1184,50 +1184,50 @@
   <div id="morePopover" class="popover" style="width: 275px;">
     <div class="py-s2">
       <div class="flex items-center gap-s3 px-s4 py-[10px] cursor-pointer">
-        <div class="w-[40px] h-[40px] rounded-[8px] bg-[#F1F3FB] flex items-center justify-center flex-shrink-0">
-          <svg class="w-[20px] h-[20px] text-[#545f70]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-5v12L3 13v-2z"/><path d="M11.6 16.8a3 3 0 0 1-5.8-1.6"/></svg>
+        <div class="w-[40px] h-[40px] rounded-[8px] bg-[#ecedfe] flex items-center justify-center flex-shrink-0">
+          <svg class="w-[20px] h-[20px] text-[#7a7674]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-5v12L3 13v-2z"/><path d="M11.6 16.8a3 3 0 0 1-5.8-1.6"/></svg>
         </div>
         <span class="text-label-large text-surface-text">Heads Up</span>
       </div>
       <div class="flex items-center gap-s3 px-s4 py-[10px] cursor-pointer">
-        <div class="w-[40px] h-[40px] rounded-[8px] bg-[#F1F3FB] flex items-center justify-center flex-shrink-0">
-          <svg class="w-[20px] h-[20px] text-[#545f70]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        <div class="w-[40px] h-[40px] rounded-[8px] bg-[#ecedfe] flex items-center justify-center flex-shrink-0">
+          <svg class="w-[20px] h-[20px] text-[#7a7674]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
         </div>
         <span class="text-label-large text-surface-text">Assets</span>
       </div>
       <div class="flex items-center gap-s3 px-s4 py-[10px] cursor-pointer">
-        <div class="w-[40px] h-[40px] rounded-[8px] bg-[#F1F3FB] flex items-center justify-center flex-shrink-0">
-          <svg class="w-[20px] h-[20px] text-[#545f70]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div class="w-[40px] h-[40px] rounded-[8px] bg-[#ecedfe] flex items-center justify-center flex-shrink-0">
+          <svg class="w-[20px] h-[20px] text-[#7a7674]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
         </div>
         <span class="text-label-large text-surface-text">Lone worker</span>
       </div>
       <div class="flex items-center gap-s3 px-s4 py-[10px] cursor-pointer">
-        <div class="w-[40px] h-[40px] rounded-[8px] bg-[#F1F3FB] flex items-center justify-center flex-shrink-0">
-          <svg class="w-[20px] h-[20px] text-[#545f70]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+        <div class="w-[40px] h-[40px] rounded-[8px] bg-[#ecedfe] flex items-center justify-center flex-shrink-0">
+          <svg class="w-[20px] h-[20px] text-[#7a7674]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
         </div>
         <span class="text-label-large text-surface-text">Sensors</span>
       </div>
       <div class="flex items-center gap-s3 px-s4 py-[10px] cursor-pointer">
-        <div class="w-[40px] h-[40px] rounded-[8px] bg-[#F1F3FB] flex items-center justify-center flex-shrink-0">
-          <svg class="w-[20px] h-[20px] text-[#545f70]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>
+        <div class="w-[40px] h-[40px] rounded-[8px] bg-[#ecedfe] flex items-center justify-center flex-shrink-0">
+          <svg class="w-[20px] h-[20px] text-[#7a7674]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>
         </div>
         <span class="text-label-large text-surface-text">Analytics</span>
       </div>
       <div class="flex items-center gap-s3 px-s4 py-[10px] cursor-pointer">
-        <div class="w-[40px] h-[40px] rounded-[8px] bg-[#F1F3FB] flex items-center justify-center flex-shrink-0">
-          <svg class="w-[20px] h-[20px] text-[#545f70]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        <div class="w-[40px] h-[40px] rounded-[8px] bg-[#ecedfe] flex items-center justify-center flex-shrink-0">
+          <svg class="w-[20px] h-[20px] text-[#7a7674]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
         </div>
         <span class="text-label-large text-surface-text">Documents</span>
       </div>
       <div class="flex items-center gap-s3 px-s4 py-[10px] cursor-pointer">
-        <div class="w-[40px] h-[40px] rounded-[8px] bg-[#F1F3FB] flex items-center justify-center flex-shrink-0">
-          <svg class="w-[20px] h-[20px] text-[#545f70]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        <div class="w-[40px] h-[40px] rounded-[8px] bg-[#ecedfe] flex items-center justify-center flex-shrink-0">
+          <svg class="w-[20px] h-[20px] text-[#7a7674]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
         </div>
         <span class="text-label-large text-surface-text">Marketplace</span>
       </div>
       <div class="flex items-center gap-s3 px-s4 py-[10px] cursor-pointer">
-        <div class="w-[40px] h-[40px] rounded-[8px] bg-[#F1F3FB] flex items-center justify-center flex-shrink-0">
-          <svg class="w-[20px] h-[20px] text-[#545f70]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        <div class="w-[40px] h-[40px] rounded-[8px] bg-[#ecedfe] flex items-center justify-center flex-shrink-0">
+          <svg class="w-[20px] h-[20px] text-[#7a7674]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
         </div>
         <span class="text-label-large text-surface-text">Library</span>
       </div>

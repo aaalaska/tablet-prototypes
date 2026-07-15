@@ -12,23 +12,23 @@
           fontFamily: { sans: ['Noto Sans', 'sans-serif'] },
           colors: {
             accent: {
-              DEFAULT: '#6559ff', hover: '#746BF5', pressed: '#564be7',
-              text: '#4740D4', weak: '#E0E4FF', weakest: '#ECEDFE',
-              border: '#564be7',
-              purple: { DEFAULT: '#675DF4', hover: '#564BE7', pressed: '#4740D4' }
+              DEFAULT: '#4a42c8', hover: '#6e68da', pressed: '#4a42c8',
+              text: '#4a42c8', weak: '#e6e4f8', weakest: '#ecedfe',
+              border: '#4a42c8',
+              purple: { DEFAULT: '#4a42c8', hover: '#4a42c8', pressed: '#4a42c8' }
             },
             surface: {
               bg: '#ffffff',
-              hover: '#f1f3fb',
-              2: '#E9EDF6',
-              text: { DEFAULT: '#1f2533', weak: '#3f495a', weaker: '#545f70', placeholder: '#bfc6d4', disabled: '#828ea0' },
-              border: { DEFAULT: '#bfc6d4', weak: '#dbe0eb', weakest: '#e9edf6' }
+              hover: '#ecedfe',
+              2: '#e9e7e7',
+              text: { DEFAULT: '#1c1714', weak: '#7a7674', weaker: '#7a7674', placeholder: '#d9d6d6', disabled: '#7a7674' },
+              border: { DEFAULT: '#d9d6d6', weak: '#e5e5e5', weakest: '#e9e7e7' }
             },
-            background: { DEFAULT: '#e9edf6', weak: '#f8f9fc' },
-            negative: { DEFAULT: '#c62f35', textOn: '#ffffff' },
-            positive: { DEFAULT: '#00875a' },
-            warning: { DEFAULT: '#f5a623', weak: '#fffbeb', text: '#92400e' },
-            info: { DEFAULT: '#0065FF', weak: '#E6F0FF', text: '#003D99' },
+            background: { DEFAULT: '#e9e7e7', weak: '#f9f8f8' },
+            negative: { DEFAULT: '#b02010', textOn: '#ffffff' },
+            positive: { DEFAULT: '#257c42' },
+            warning: { DEFAULT: '#a86010', weak: '#fdf8f0', text: '#643804' },
+            info: { DEFAULT: '#3060c8', weak: '#deeaff', text: '#3060c8' },
           },
           spacing: { s1:'4px', s2:'8px', s3:'12px', s4:'16px', s5:'20px', s6:'24px', s8:'32px' },
           borderRadius: { xsmall:'4px', small:'8px', medium:'12px', large:'16px', full:'9999px' },
@@ -57,7 +57,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    .focus-ring:focus-visible { outline: none; box-shadow: 0 0 0 4px rgba(101, 89, 255, 0.90), 0 0 0 6px white; }
+    .focus-ring:focus-visible { outline: none; box-shadow: 0 0 0 4px rgba(74, 66, 200, 0.90), 0 0 0 6px white; }
 
     /* iPadOS 26 Glass UI */
     .glass {
@@ -78,8 +78,8 @@
     }
     .glass-search:focus-within {
       background: rgba(255, 255, 255, 0.88);
-      box-shadow: 0px 4px 24px 0px rgba(101, 89, 255, 0.12);
-      border-color: rgba(101, 89, 255, 0.3);
+      box-shadow: 0px 4px 24px 0px rgba(74, 66, 200, 0.12);
+      border-color: rgba(74, 66, 200, 0.3);
     }
 
     /* Rail nav */
@@ -92,14 +92,14 @@
       backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
       border: 0.5px solid rgba(255, 255, 255, 0.6);
     }
-    .rail-item.active .rail-icon-box svg { color: #675DF4; }
+    .rail-item.active .rail-icon-box svg { color: #4a42c8; }
     .rail-item .icon-filled { display: none; }
     .rail-item.active .icon-filled { display: block; }
     .rail-item.active .icon-outline { display: none; }
-    .rail-item-label { font-size: 12px; line-height: 16px; font-weight: 500; color: #3f495a; }
+    .rail-item-label { font-size: 12px; line-height: 16px; font-weight: 500; color: #7a7674; }
 
     /* Status bar */
-    .status-bar { height: 24px; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; font-size: 12px; font-weight: 600; color: #1f2533; }
+    .status-bar { height: 24px; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; font-size: 12px; font-weight: 600; color: #1c1714; }
 
     /* Kanban */
     .kanban-wrapper {
@@ -111,13 +111,13 @@
 
     .kanban-column {
       min-width: 300px; width: 300px; flex-shrink: 0;
-      background: #F8F9FC; border-radius: 12px; padding: 12px;
+      background: #f9f8f8; border-radius: 12px; padding: 12px;
       display: flex; flex-direction: column; gap: 16px;
       scroll-snap-align: start;
     }
 
     .kanban-card {
-      background: #fff; border: 1px solid #DBE0EB; border-radius: 12px;
+      background: #fff; border: 1px solid #e5e5e5; border-radius: 12px;
       padding: 16px; cursor: grab; user-select: none;
       transition: box-shadow 150ms ease, transform 150ms ease, opacity 150ms ease;
     }
@@ -126,8 +126,8 @@
       opacity: 0.5; box-shadow: 0 8px 24px rgba(0,0,0,0.15);
       transform: scale(1.02);
     }
-    .kanban-card.drag-over-top { border-top: 2px solid #6559ff; }
-    .kanban-card.drag-over-bottom { border-bottom: 2px solid #6559ff; }
+    .kanban-card.drag-over-top { border-top: 2px solid #4a42c8; }
+    .kanban-card.drag-over-bottom { border-bottom: 2px solid #4a42c8; }
 
     .kanban-cards {
       display: flex; flex-direction: column; gap: 8px;
@@ -135,10 +135,10 @@
       transition: background 150ms ease; border-radius: 8px;
       scrollbar-width: none;
     }
-    .kanban-cards.drop-target { background: rgba(101, 89, 255, 0.06); }
+    .kanban-cards.drop-target { background: rgba(74, 66, 200, 0.06); }
 
     .add-card-btn {
-      background: #fff; border: 1px solid #BFC6D4; border-radius: 8px;
+      background: #fff; border: 1px solid #d9d6d6; border-radius: 8px;
       height: 40px; display: flex; align-items: center; justify-content: center;
       cursor: pointer; flex-shrink: 0;
       transition: background 150ms ease;
@@ -173,7 +173,7 @@
       display: flex; align-items: center; gap: 8px;
       padding: 8px 10px 8px 8px;
       font-family: -apple-system, 'SF Pro Text', 'Noto Sans', sans-serif;
-      font-size: 15px; font-weight: 400; color: #1a1a1a;
+      font-size: 15px; font-weight: 400; color: #1c1714;
       cursor: pointer;
       border-radius: 10px;
       transition: background 120ms ease;
@@ -183,7 +183,7 @@
     }
     .context-menu-item .menu-icon {
       width: 28px; flex-shrink: 0; display: flex; align-items: center; justify-content: center;
-      color: #1a1a1a;
+      color: #1c1714;
     }
     .context-menu-item .menu-icon svg {
       width: 18px; height: 18px;
@@ -192,7 +192,7 @@
 
     /* iPad 11" Device Mockup */
     body.mockup-mode {
-      background: #e0e0e0;
+      background: #d9d6d6;
       overflow: auto;
       display: flex;
       align-items: center;
@@ -203,11 +203,11 @@
     .ipad-frame {
       width: 1254px; /* 1194 screen + 30px bezel each side */
       height: 914px; /* 834 screen + 40px top/bottom bezel */
-      background: #1a1a1a;
+      background: #1c1714;
       border-radius: 36px;
       padding: 40px 30px;
       box-shadow:
-        0 0 0 2px #333,
+        0 0 0 2px #1c1714,
         0 40px 100px rgba(0,0,0,0.4),
         0 10px 40px rgba(0,0,0,0.3),
         inset 0 0 0 1px rgba(255,255,255,0.05);
@@ -223,9 +223,9 @@
       transform: translateX(-50%);
       width: 8px;
       height: 8px;
-      background: #2a2a2a;
+      background: #1c1714;
       border-radius: 50%;
-      border: 1px solid #333;
+      border: 1px solid #1c1714;
     }
     .ipad-screen {
       width: 1194px;
@@ -233,7 +233,7 @@
       border-radius: 12px;
       overflow: hidden;
       position: relative;
-      background: #F8F9FC;
+      background: #f9f8f8;
     }
     .ipad-screen > .status-bar {
       position: relative;
@@ -268,8 +268,8 @@
       <div class="mb-s4">
         <div class="w-10 h-10 rounded-[10px] overflow-hidden">
           <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=80&h=80&fit=crop&crop=center" alt="Crestwood" class="w-10 h-10 rounded-[10px] object-cover" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-          <div class="w-10 h-10 rounded-[10px] bg-[#1a3a2a] flex-col items-center justify-center overflow-hidden" style="display:none">
-            <svg class="w-5 h-5 text-[#c8e6d8]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L4 14h5v8h6v-8h5L12 2z"/></svg>
+          <div class="w-10 h-10 rounded-[10px] bg-[#144524] flex-col items-center justify-center overflow-hidden" style="display:none">
+            <svg class="w-5 h-5 text-[#d0e9d8]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L4 14h5v8h6v-8h5L12 2z"/></svg>
           </div>
         </div>
       </div>
@@ -323,7 +323,7 @@
         </div>
         <!-- Bell -->
         <div class="glass w-11 h-11 flex items-center justify-center">
-          <svg class="w-6 h-6 text-[#404040]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          <svg class="w-6 h-6 text-[#1c1714]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
         </div>
         <div class="w-10 h-10 rounded-full overflow-hidden">
           <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" alt="Avatar" class="w-10 h-10 object-cover" />
@@ -332,28 +332,28 @@
     </nav>
 
     <!-- Content Area -->
-    <main class="flex-1 min-w-0 min-h-0 flex flex-col" style="border-radius: 24px 0 0 0; border-top: 1px solid #DBE0EB; border-left: 1px solid #DBE0EB; background: #FFF; overflow: hidden;">
+    <main class="flex-1 min-w-0 min-h-0 flex flex-col" style="border-radius: 24px 0 0 0; border-top: 1px solid #e5e5e5; border-left: 1px solid #e5e5e5; background: #FFF; overflow: hidden;">
 
       <!-- Header -->
       <header class="flex items-center justify-between px-s6 h-[68px] flex-shrink-0 border-b border-surface-border-weak">
         <h1 class="text-heading">Actions</h1>
         <div class="flex items-center gap-s3">
           <div class="glass-search flex items-center gap-s1 h-11 pl-[11px] pr-[10px] min-w-[180px]">
-            <svg class="w-[18px] h-[18px] text-[#404040] flex-shrink-0" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.2931 2.37207C5.96319 2.37207 2.45312 5.88213 2.45312 10.212C2.45312 14.5419 5.96319 18.052 10.2931 18.052C12.0558 18.052 13.6826 17.4702 14.992 16.4883L19.8393 21.3355C20.2298 21.726 20.863 21.726 21.2535 21.3355C21.644 20.945 21.644 20.3118 21.2535 19.9213L16.4271 15.0949C17.4949 13.7554 18.133 12.0582 18.133 10.212C18.133 5.88213 14.6229 2.37207 10.2931 2.37207ZM4.45312 10.212C4.45312 6.9867 7.06776 4.37207 10.2931 4.37207C13.5184 4.37207 16.133 6.9867 16.133 10.212C16.133 13.4373 13.5184 16.052 10.2931 16.052C7.06776 16.052 4.45312 13.4373 4.45312 10.212Z"/></svg>
-            <input type="search" placeholder="Search" class="flex-1 text-[17px] font-medium placeholder:text-[#b0b0b0] text-[#404040] outline-none bg-transparent leading-5" style="font-family:'SF Pro Display','SF Pro','system-ui',sans-serif; font-weight:400;">
+            <svg class="w-[18px] h-[18px] text-[#1c1714] flex-shrink-0" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.2931 2.37207C5.96319 2.37207 2.45312 5.88213 2.45312 10.212C2.45312 14.5419 5.96319 18.052 10.2931 18.052C12.0558 18.052 13.6826 17.4702 14.992 16.4883L19.8393 21.3355C20.2298 21.726 20.863 21.726 21.2535 21.3355C21.644 20.945 21.644 20.3118 21.2535 19.9213L16.4271 15.0949C17.4949 13.7554 18.133 12.0582 18.133 10.212C18.133 5.88213 14.6229 2.37207 10.2931 2.37207ZM4.45312 10.212C4.45312 6.9867 7.06776 4.37207 10.2931 4.37207C13.5184 4.37207 16.133 6.9867 16.133 10.212C16.133 13.4373 13.5184 16.052 10.2931 16.052C7.06776 16.052 4.45312 13.4373 4.45312 10.212Z"/></svg>
+            <input type="search" placeholder="Search" class="flex-1 text-[17px] font-medium placeholder:text-[#bcb8b8] text-[#1c1714] outline-none bg-transparent leading-5" style="font-family:'SF Pro Display','SF Pro','system-ui',sans-serif; font-weight:400;">
           </div>
           <div id="toolbarGroup" class="glass h-11 flex items-center gap-[12px] px-[4px]" style="border-radius:296px; position:relative;">
             <!-- Filter icon -->
             <div class="w-[36px] h-[36px] flex items-center justify-center rounded-full">
-              <svg class="w-[22px] h-[22px] text-[#1f2533]" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16M7 12h10M10 18h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+              <svg class="w-[22px] h-[22px] text-[#1c1714]" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16M7 12h10M10 18h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
             </div>
             <!-- Sort (arrow-up-down) icon -->
             <div class="w-[36px] h-[36px] flex items-center justify-center rounded-full">
-              <svg class="w-[22px] h-[22px] text-[#1f2533]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4v16m0 0l-3-3m3 3l3-3M17 20V4m0 0l3 3m-3-3l-3 3"/></svg>
+              <svg class="w-[22px] h-[22px] text-[#1c1714]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4v16m0 0l-3-3m3 3l3-3M17 20V4m0 0l3 3m-3-3l-3 3"/></svg>
             </div>
             <!-- List icon (context menu trigger) -->
             <div id="viewMenuTrigger" class="w-[36px] h-[36px] flex items-center justify-center rounded-full cursor-pointer">
-              <svg class="w-[22px] h-[22px] text-[#1f2533]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="9" y1="6" x2="20" y2="6"/><line x1="9" y1="12" x2="20" y2="12"/><line x1="9" y1="18" x2="20" y2="18"/><circle cx="5" cy="6" r="1" fill="currentColor"/><circle cx="5" cy="12" r="1" fill="currentColor"/><circle cx="5" cy="18" r="1" fill="currentColor"/></svg>
+              <svg class="w-[22px] h-[22px] text-[#1c1714]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="9" y1="6" x2="20" y2="6"/><line x1="9" y1="12" x2="20" y2="12"/><line x1="9" y1="18" x2="20" y2="18"/><circle cx="5" cy="6" r="1" fill="currentColor"/><circle cx="5" cy="12" r="1" fill="currentColor"/><circle cx="5" cy="18" r="1" fill="currentColor"/></svg>
             </div>
             <!-- iOS Context Menu -->
             <div id="viewContextMenu" class="context-menu">
@@ -391,55 +391,55 @@
 
           <!-- Column: To Do -->
           <div class="kanban-column" data-column="todo">
-            <span class="inline-flex items-center px-[8px] py-[2px] rounded-full text-[12px] leading-[16px] font-medium w-fit" style="background:#E5FAFF;color:#0D75B5;">To Do</span>
+            <span class="inline-flex items-center px-[8px] py-[2px] rounded-full text-[12px] leading-[16px] font-medium w-fit" style="background:#deeaff;color:#3060c8;">To Do</span>
             <div class="kanban-cards" data-column="todo">
               <div class="kanban-card" draggable="true">
-                <div class="text-label-large text-[#1f2533] mb-[8px]">Tidy up bottom floor cables</div>
+                <div class="text-label-large text-[#1c1714] mb-[8px]">Tidy up bottom floor cables</div>
                 <div class="flex items-center gap-[8px]">
                   <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" class="w-[20px] h-[20px] rounded-full object-cover flex-shrink-0" alt="" />
-                  <div class="flex items-center gap-[4px] text-label-small text-[#545f70]">
+                  <div class="flex items-center gap-[4px] text-label-small text-[#7a7674]">
                     <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M8 2C8.55228 2 9 2.44772 9 3V4H15V3C15 2.44772 15.4477 2 16 2C16.5523 2 17 2.44772 17 3V4H19C20.1046 4 21 4.89543 21 6V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20V6C3 4.89543 3.89543 4 5 4H7V3C7 2.44772 7.44772 2 8 2ZM5 10V20H19V10H5Z"/></svg>
                     <span>March 13</span>
                   </div>
                 </div>
               </div>
               <div class="kanban-card" draggable="true">
-                <div class="text-label-large text-[#1f2533] mb-[8px]">Install new server rack</div>
+                <div class="text-label-large text-[#1c1714] mb-[8px]">Install new server rack</div>
                 <div class="flex items-center gap-[8px]">
                   <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" class="w-[20px] h-[20px] rounded-full object-cover flex-shrink-0" alt="" />
-                  <div class="flex items-center gap-[4px] text-label-small text-[#545f70]">
+                  <div class="flex items-center gap-[4px] text-label-small text-[#7a7674]">
                     <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M8 2C8.55228 2 9 2.44772 9 3V4H15V3C15 2.44772 15.4477 2 16 2C16.5523 2 17 2.44772 17 3V4H19C20.1046 4 21 4.89543 21 6V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20V6C3 4.89543 3.89543 4 5 4H7V3C7 2.44772 7.44772 2 8 2ZM5 10V20H19V10H5Z"/></svg>
                     <span>March 13</span>
                   </div>
-                  <div class="flex items-center gap-[2px] text-label-small text-[#A8242A]">
+                  <div class="flex items-center gap-[2px] text-label-small text-[#b02010]">
                     <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" transform="rotate(-90 12 12)"/></svg>
                     <span>High</span>
                   </div>
                 </div>
               </div>
               <div class="kanban-card" draggable="true">
-                <div class="text-label-large text-[#1f2533] mb-[8px]">Organize meeting with suppliers</div>
+                <div class="text-label-large text-[#1c1714] mb-[8px]">Organize meeting with suppliers</div>
                 <div class="flex items-center gap-[8px]">
                   <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" class="w-[20px] h-[20px] rounded-full object-cover flex-shrink-0" alt="" />
-                  <div class="flex items-center gap-[4px] text-label-small text-[#545f70]">
+                  <div class="flex items-center gap-[4px] text-label-small text-[#7a7674]">
                     <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M8 2C8.55228 2 9 2.44772 9 3V4H15V3C15 2.44772 15.4477 2 16 2C16.5523 2 17 2.44772 17 3V4H19C20.1046 4 21 4.89543 21 6V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20V6C3 4.89543 3.89543 4 5 4H7V3C7 2.44772 7.44772 2 8 2ZM5 10V20H19V10H5Z"/></svg>
                     <span>March 13</span>
                   </div>
-                  <div class="flex items-center gap-[2px] text-label-small text-[#BD5800]">
+                  <div class="flex items-center gap-[2px] text-label-small text-[#a86010]">
                     <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" transform="rotate(-90 12 12)"/></svg>
                     <span>Medium</span>
                   </div>
                 </div>
               </div>
               <div class="kanban-card" draggable="true">
-                <div class="text-label-large text-[#1f2533] mb-[8px]">Update project documentation</div>
+                <div class="text-label-large text-[#1c1714] mb-[8px]">Update project documentation</div>
                 <div class="flex items-center gap-[8px]">
                   <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" class="w-[20px] h-[20px] rounded-full object-cover flex-shrink-0" alt="" />
-                  <div class="flex items-center gap-[4px] text-label-small text-[#545f70]">
+                  <div class="flex items-center gap-[4px] text-label-small text-[#7a7674]">
                     <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M8 2C8.55228 2 9 2.44772 9 3V4H15V3C15 2.44772 15.4477 2 16 2C16.5523 2 17 2.44772 17 3V4H19C20.1046 4 21 4.89543 21 6V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20V6C3 4.89543 3.89543 4 5 4H7V3C7 2.44772 7.44772 2 8 2ZM5 10V20H19V10H5Z"/></svg>
                     <span>March 13</span>
                   </div>
-                  <div class="flex items-center gap-[2px] text-label-small text-[#545f70]">
+                  <div class="flex items-center gap-[2px] text-label-small text-[#7a7674]">
                     <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" transform="rotate(90 12 12)"/></svg>
                     <span>Low</span>
                   </div>
@@ -447,99 +447,99 @@
               </div>
             </div>
             <div class="add-card-btn">
-              <svg class="w-[18px] h-[18px] text-[#4740D4]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              <svg class="w-[18px] h-[18px] text-[#4a42c8]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
             </div>
           </div>
 
           <!-- Column: In progress -->
           <div class="kanban-column" data-column="inprogress">
-            <span class="inline-flex items-center px-[8px] py-[2px] rounded-full text-[12px] leading-[16px] font-medium w-fit" style="background:#FFF1CC;color:#9E4A00;">In progress</span>
+            <span class="inline-flex items-center px-[8px] py-[2px] rounded-full text-[12px] leading-[16px] font-medium w-fit" style="background:#feeac6;color:#643804;">In progress</span>
             <div class="kanban-cards" data-column="inprogress">
               <div class="kanban-card" draggable="true">
-                <div class="text-label-large text-[#1f2533] mb-[8px]">Organize storage room</div>
+                <div class="text-label-large text-[#1c1714] mb-[8px]">Organize storage room</div>
                 <div class="flex items-center gap-[8px]">
                   <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" class="w-[20px] h-[20px] rounded-full object-cover flex-shrink-0" alt="" />
-                  <div class="flex items-center gap-[4px] text-label-small text-[#545f70]">
+                  <div class="flex items-center gap-[4px] text-label-small text-[#7a7674]">
                     <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M8 2C8.55228 2 9 2.44772 9 3V4H15V3C15 2.44772 15.4477 2 16 2C16.5523 2 17 2.44772 17 3V4H19C20.1046 4 21 4.89543 21 6V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20V6C3 4.89543 3.89543 4 5 4H7V3C7 2.44772 7.44772 2 8 2ZM5 10V20H19V10H5Z"/></svg>
                     <span>March 16</span>
                   </div>
-                  <div class="flex items-center gap-[2px] text-label-small text-[#545f70]">
+                  <div class="flex items-center gap-[2px] text-label-small text-[#7a7674]">
                     <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" transform="rotate(90 12 12)"/></svg>
                     <span>Low</span>
                   </div>
                 </div>
               </div>
               <div class="kanban-card" draggable="true">
-                <div class="text-label-large text-[#1f2533] mb-[8px]">Schedule team meeting</div>
+                <div class="text-label-large text-[#1c1714] mb-[8px]">Schedule team meeting</div>
                 <div class="flex items-center gap-[8px]">
                   <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" class="w-[20px] h-[20px] rounded-full object-cover flex-shrink-0" alt="" />
-                  <div class="flex items-center gap-[4px] text-label-small text-[#545f70]">
+                  <div class="flex items-center gap-[4px] text-label-small text-[#7a7674]">
                     <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M8 2C8.55228 2 9 2.44772 9 3V4H15V3C15 2.44772 15.4477 2 16 2C16.5523 2 17 2.44772 17 3V4H19C20.1046 4 21 4.89543 21 6V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20V6C3 4.89543 3.89543 4 5 4H7V3C7 2.44772 7.44772 2 8 2ZM5 10V20H19V10H5Z"/></svg>
                     <span>March 16</span>
                   </div>
-                  <div class="flex items-center gap-[2px] text-label-small text-[#545f70]">
+                  <div class="flex items-center gap-[2px] text-label-small text-[#7a7674]">
                     <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" transform="rotate(90 12 12)"/></svg>
                     <span>Low</span>
                   </div>
                 </div>
               </div>
               <div class="kanban-card" draggable="true">
-                <div class="text-label-large text-[#1f2533] mb-[8px]">Update project documentation</div>
+                <div class="text-label-large text-[#1c1714] mb-[8px]">Update project documentation</div>
                 <div class="flex items-center gap-[8px]">
                   <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" class="w-[20px] h-[20px] rounded-full object-cover flex-shrink-0" alt="" />
-                  <div class="flex items-center gap-[4px] text-label-small text-[#545f70]">
+                  <div class="flex items-center gap-[4px] text-label-small text-[#7a7674]">
                     <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M8 2C8.55228 2 9 2.44772 9 3V4H15V3C15 2.44772 15.4477 2 16 2C16.5523 2 17 2.44772 17 3V4H19C20.1046 4 21 4.89543 21 6V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20V6C3 4.89543 3.89543 4 5 4H7V3C7 2.44772 7.44772 2 8 2ZM5 10V20H19V10H5Z"/></svg>
                     <span>March 16</span>
                   </div>
                 </div>
               </div>
               <div class="kanban-card" draggable="true">
-                <div class="text-label-large text-[#1f2533] mb-[8px]">Replace fire extinguishers on level 2</div>
+                <div class="text-label-large text-[#1c1714] mb-[8px]">Replace fire extinguishers on level 2</div>
                 <div class="flex items-center gap-[8px]">
                   <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop&crop=face" class="w-[20px] h-[20px] rounded-full object-cover flex-shrink-0" alt="" />
-                  <div class="flex items-center gap-[4px] text-label-small text-[#545f70]">
+                  <div class="flex items-center gap-[4px] text-label-small text-[#7a7674]">
                     <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M8 2C8.55228 2 9 2.44772 9 3V4H15V3C15 2.44772 15.4477 2 16 2C16.5523 2 17 2.44772 17 3V4H19C20.1046 4 21 4.89543 21 6V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20V6C3 4.89543 3.89543 4 5 4H7V3C7 2.44772 7.44772 2 8 2ZM5 10V20H19V10H5Z"/></svg>
                     <span>March 18</span>
                   </div>
-                  <div class="flex items-center gap-[2px] text-label-small text-[#A8242A]">
+                  <div class="flex items-center gap-[2px] text-label-small text-[#b02010]">
                     <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" transform="rotate(-90 12 12)"/></svg>
                     <span>High</span>
                   </div>
                 </div>
               </div>
               <div class="kanban-card" draggable="true">
-                <div class="text-label-large text-[#1f2533] mb-[8px]">Calibrate temperature sensors</div>
+                <div class="text-label-large text-[#1c1714] mb-[8px]">Calibrate temperature sensors</div>
                 <div class="flex items-center gap-[8px]">
                   <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=40&h=40&fit=crop&crop=face" class="w-[20px] h-[20px] rounded-full object-cover flex-shrink-0" alt="" />
-                  <div class="flex items-center gap-[4px] text-label-small text-[#545f70]">
+                  <div class="flex items-center gap-[4px] text-label-small text-[#7a7674]">
                     <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M8 2C8.55228 2 9 2.44772 9 3V4H15V3C15 2.44772 15.4477 2 16 2C16.5523 2 17 2.44772 17 3V4H19C20.1046 4 21 4.89543 21 6V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20V6C3 4.89543 3.89543 4 5 4H7V3C7 2.44772 7.44772 2 8 2ZM5 10V20H19V10H5Z"/></svg>
                     <span>March 17</span>
                   </div>
-                  <div class="flex items-center gap-[2px] text-label-small text-[#BD5800]">
+                  <div class="flex items-center gap-[2px] text-label-small text-[#a86010]">
                     <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" transform="rotate(-90 12 12)"/></svg>
                     <span>Medium</span>
                   </div>
                 </div>
               </div>
               <div class="kanban-card" draggable="true">
-                <div class="text-label-large text-[#1f2533] mb-[8px]">Order new safety signage</div>
+                <div class="text-label-large text-[#1c1714] mb-[8px]">Order new safety signage</div>
                 <div class="flex items-center gap-[8px]">
                   <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=40&h=40&fit=crop&crop=face" class="w-[20px] h-[20px] rounded-full object-cover flex-shrink-0" alt="" />
-                  <div class="flex items-center gap-[4px] text-label-small text-[#545f70]">
+                  <div class="flex items-center gap-[4px] text-label-small text-[#7a7674]">
                     <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M8 2C8.55228 2 9 2.44772 9 3V4H15V3C15 2.44772 15.4477 2 16 2C16.5523 2 17 2.44772 17 3V4H19C20.1046 4 21 4.89543 21 6V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20V6C3 4.89543 3.89543 4 5 4H7V3C7 2.44772 7.44772 2 8 2ZM5 10V20H19V10H5Z"/></svg>
                     <span>March 19</span>
                   </div>
                 </div>
               </div>
               <div class="kanban-card" draggable="true">
-                <div class="text-label-large text-[#1f2533] mb-[8px]">Review incident reports from last week</div>
+                <div class="text-label-large text-[#1c1714] mb-[8px]">Review incident reports from last week</div>
                 <div class="flex items-center gap-[8px]">
                   <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" class="w-[20px] h-[20px] rounded-full object-cover flex-shrink-0" alt="" />
-                  <div class="flex items-center gap-[4px] text-label-small text-[#545f70]">
+                  <div class="flex items-center gap-[4px] text-label-small text-[#7a7674]">
                     <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M8 2C8.55228 2 9 2.44772 9 3V4H15V3C15 2.44772 15.4477 2 16 2C16.5523 2 17 2.44772 17 3V4H19C20.1046 4 21 4.89543 21 6V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20V6C3 4.89543 3.89543 4 5 4H7V3C7 2.44772 7.44772 2 8 2ZM5 10V20H19V10H5Z"/></svg>
                     <span>March 15</span>
                   </div>
-                  <div class="flex items-center gap-[2px] text-label-small text-[#545f70]">
+                  <div class="flex items-center gap-[2px] text-label-small text-[#7a7674]">
                     <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" transform="rotate(90 12 12)"/></svg>
                     <span>Low</span>
                   </div>
@@ -547,23 +547,23 @@
               </div>
             </div>
             <div class="add-card-btn">
-              <svg class="w-[18px] h-[18px] text-[#4740D4]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              <svg class="w-[18px] h-[18px] text-[#4a42c8]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
             </div>
           </div>
 
           <!-- Column: Overdue -->
           <div class="kanban-column" data-column="overdue">
-            <span class="inline-flex items-center px-[8px] py-[2px] rounded-full text-[12px] leading-[16px] font-medium w-fit" style="background:#FFEBE6;color:#A8242A;">Overdue</span>
+            <span class="inline-flex items-center px-[8px] py-[2px] rounded-full text-[12px] leading-[16px] font-medium w-fit" style="background:#f9d8d0;color:#b02010;">Overdue</span>
             <div class="kanban-cards" data-column="overdue">
               <div class="kanban-card" draggable="true">
-                <div class="text-label-large text-[#1f2533] mb-[8px]">Conduct forklift maintenance</div>
+                <div class="text-label-large text-[#1c1714] mb-[8px]">Conduct forklift maintenance</div>
                 <div class="flex items-center gap-[8px]">
                   <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" class="w-[20px] h-[20px] rounded-full object-cover flex-shrink-0" alt="" />
-                  <div class="flex items-center gap-[4px] text-label-small text-[#545f70]">
+                  <div class="flex items-center gap-[4px] text-label-small text-[#7a7674]">
                     <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M8 2C8.55228 2 9 2.44772 9 3V4H15V3C15 2.44772 15.4477 2 16 2C16.5523 2 17 2.44772 17 3V4H19C20.1046 4 21 4.89543 21 6V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20V6C3 4.89543 3.89543 4 5 4H7V3C7 2.44772 7.44772 2 8 2ZM5 10V20H19V10H5Z"/></svg>
                     <span>Jan 23</span>
                   </div>
-                  <div class="flex items-center gap-[2px] text-label-small text-[#A8242A]">
+                  <div class="flex items-center gap-[2px] text-label-small text-[#b02010]">
                     <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" transform="rotate(-90 12 12)"/></svg>
                     <span>High</span>
                   </div>
@@ -571,53 +571,53 @@
               </div>
             </div>
             <div class="add-card-btn">
-              <svg class="w-[18px] h-[18px] text-[#4740D4]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              <svg class="w-[18px] h-[18px] text-[#4a42c8]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
             </div>
           </div>
 
           <!-- Column: Upcoming -->
           <div class="kanban-column" data-column="upcoming">
-            <span class="inline-flex items-center px-[8px] py-[2px] rounded-full text-[12px] leading-[16px] font-medium w-fit" style="background:#F1F3FB;color:#545f70;">Upcoming</span>
+            <span class="inline-flex items-center px-[8px] py-[2px] rounded-full text-[12px] leading-[16px] font-medium w-fit" style="background:#ecedfe;color:#7a7674;">Upcoming</span>
             <div class="kanban-cards" data-column="upcoming">
               <div class="kanban-card" draggable="true">
-                <div class="text-label-large text-[#1f2533] mb-[8px]">Prepare report for Sydney line managers</div>
+                <div class="text-label-large text-[#1c1714] mb-[8px]">Prepare report for Sydney line managers</div>
                 <div class="flex items-center gap-[8px]">
                   <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" class="w-[20px] h-[20px] rounded-full object-cover flex-shrink-0" alt="" />
-                  <div class="flex items-center gap-[4px] text-label-small text-[#545f70]">
+                  <div class="flex items-center gap-[4px] text-label-small text-[#7a7674]">
                     <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M8 2C8.55228 2 9 2.44772 9 3V4H15V3C15 2.44772 15.4477 2 16 2C16.5523 2 17 2.44772 17 3V4H19C20.1046 4 21 4.89543 21 6V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20V6C3 4.89543 3.89543 4 5 4H7V3C7 2.44772 7.44772 2 8 2ZM5 10V20H19V10H5Z"/></svg>
                     <span>March 20</span>
                   </div>
                 </div>
               </div>
               <div class="kanban-card" draggable="true">
-                <div class="text-label-large text-[#1f2533] mb-[8px]">Conduct forklift review</div>
+                <div class="text-label-large text-[#1c1714] mb-[8px]">Conduct forklift review</div>
                 <div class="flex items-center gap-[8px]">
                   <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" class="w-[20px] h-[20px] rounded-full object-cover flex-shrink-0" alt="" />
-                  <div class="flex items-center gap-[4px] text-label-small text-[#545f70]">
+                  <div class="flex items-center gap-[4px] text-label-small text-[#7a7674]">
                     <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M8 2C8.55228 2 9 2.44772 9 3V4H15V3C15 2.44772 15.4477 2 16 2C16.5523 2 17 2.44772 17 3V4H19C20.1046 4 21 4.89543 21 6V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20V6C3 4.89543 3.89543 4 5 4H7V3C7 2.44772 7.44772 2 8 2ZM5 10V20H19V10H5Z"/></svg>
                     <span>March 21</span>
                   </div>
-                  <div class="flex items-center gap-[2px] text-label-small text-[#A8242A]">
+                  <div class="flex items-center gap-[2px] text-label-small text-[#b02010]">
                     <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" transform="rotate(-90 12 12)"/></svg>
                     <span>High</span>
                   </div>
                 </div>
               </div>
               <div class="kanban-card" draggable="true">
-                <div class="text-label-large text-[#1f2533] mb-[8px]">Finalize budget for next quarter</div>
+                <div class="text-label-large text-[#1c1714] mb-[8px]">Finalize budget for next quarter</div>
                 <div class="flex items-center gap-[8px]">
                   <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" class="w-[20px] h-[20px] rounded-full object-cover flex-shrink-0" alt="" />
-                  <div class="flex items-center gap-[4px] text-label-small text-[#545f70]">
+                  <div class="flex items-center gap-[4px] text-label-small text-[#7a7674]">
                     <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M8 2C8.55228 2 9 2.44772 9 3V4H15V3C15 2.44772 15.4477 2 16 2C16.5523 2 17 2.44772 17 3V4H19C20.1046 4 21 4.89543 21 6V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20V6C3 4.89543 3.89543 4 5 4H7V3C7 2.44772 7.44772 2 8 2ZM5 10V20H19V10H5Z"/></svg>
                     <span>March 22</span>
                   </div>
                 </div>
               </div>
               <div class="kanban-card" draggable="true">
-                <div class="text-label-large text-[#1f2533] mb-[8px]">Plan team-building event</div>
+                <div class="text-label-large text-[#1c1714] mb-[8px]">Plan team-building event</div>
                 <div class="flex items-center gap-[8px]">
                   <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" class="w-[20px] h-[20px] rounded-full object-cover flex-shrink-0" alt="" />
-                  <div class="flex items-center gap-[4px] text-label-small text-[#545f70]">
+                  <div class="flex items-center gap-[4px] text-label-small text-[#7a7674]">
                     <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M8 2C8.55228 2 9 2.44772 9 3V4H15V3C15 2.44772 15.4477 2 16 2C16.5523 2 17 2.44772 17 3V4H19C20.1046 4 21 4.89543 21 6V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20V6C3 4.89543 3.89543 4 5 4H7V3C7 2.44772 7.44772 2 8 2ZM5 10V20H19V10H5Z"/></svg>
                     <span>March 25</span>
                   </div>
@@ -625,7 +625,7 @@
               </div>
             </div>
             <div class="add-card-btn">
-              <svg class="w-[18px] h-[18px] text-[#4740D4]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              <svg class="w-[18px] h-[18px] text-[#4a42c8]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
             </div>
           </div>
 
@@ -640,11 +640,11 @@
       <!-- Dialog Header -->
       <div class="flex items-center justify-between px-[16px] pt-[16px] pb-[10px] flex-shrink-0">
         <button onclick="closeDialog()" class="glass w-[44px] h-[44px] flex items-center justify-center" style="border-radius:9999px;">
-          <svg class="w-[18px] h-[18px] text-[#1f2533]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          <svg class="w-[18px] h-[18px] text-[#1c1714]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
         </button>
-        <p id="dialogTitle" class="text-headline-small text-[#1f2533] text-center overflow-hidden text-ellipsis whitespace-nowrap" style="max-width:220px;">Tidy up bottom floor cables</p>
+        <p id="dialogTitle" class="text-headline-small text-[#1c1714] text-center overflow-hidden text-ellipsis whitespace-nowrap" style="max-width:220px;">Tidy up bottom floor cables</p>
         <button class="glass w-[44px] h-[44px] flex items-center justify-center" style="border-radius:9999px;">
-          <svg class="w-[18px] h-[18px] text-[#1f2533]" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="6" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="18" r="1.5"/></svg>
+          <svg class="w-[18px] h-[18px] text-[#1c1714]" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="6" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="18" r="1.5"/></svg>
         </button>
       </div>
 
@@ -654,23 +654,23 @@
         <div class="flex justify-center w-full mb-[24px]">
           <div class="inline-flex p-[4px] relative" style="border-radius:296px;">
             <div class="glass-search absolute inset-0" style="border-radius:296px;"></div>
-            <button class="relative z-10 px-[18px] py-[8px] rounded-full text-label-medium text-[#4740D4]" style="background:#ededed;">Details</button>
-            <button class="relative z-10 px-[18px] py-[8px] rounded-full text-label-medium text-[#404040]">Activity</button>
+            <button class="relative z-10 px-[18px] py-[8px] rounded-full text-label-medium text-[#4a42c8]" style="background:#e9e7e7;">Details</button>
+            <button class="relative z-10 px-[18px] py-[8px] rounded-full text-label-medium text-[#1c1714]">Activity</button>
           </div>
         </div>
 
         <div class="flex flex-col gap-[20px]">
           <!-- Status + Badge row -->
           <div class="flex items-end justify-between">
-            <button id="dialogStatus" class="inline-flex items-center gap-[4px] px-[12px] py-[8px] rounded-small text-label-medium" style="background:#FFFAE5;color:#BD5800;">
+            <button id="dialogStatus" class="inline-flex items-center gap-[4px] px-[12px] py-[8px] rounded-small text-label-medium" style="background:#fdf8f0;color:#a86010;">
               <span id="dialogStatusText">To do</span>
               <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
             </button>
-            <span id="dialogBadge" class="inline-flex items-center px-[8px] py-[2px] rounded-full text-label-small" style="background:#F1F3FB;color:#545f70;">AC-114</span>
+            <span id="dialogBadge" class="inline-flex items-center px-[8px] py-[2px] rounded-full text-label-small" style="background:#ecedfe;color:#7a7674;">AC-114</span>
           </div>
 
           <!-- Description -->
-          <textarea class="w-full text-body-medium text-[#1F2533] border border-[#BFC6D4] rounded-medium p-[12px] resize-none focus:outline-none focus:border-[#6559ff]" rows="3" placeholder="Add description...">These cables are a tripping hazard!! U gotta do something abt it!!</textarea>
+          <textarea class="w-full text-body-medium text-[#1c1714] border border-[#d9d6d6] rounded-medium p-[12px] resize-none focus:outline-none focus:border-[#4a42c8]" rows="3" placeholder="Add description...">These cables are a tripping hazard!! U gotta do something abt it!!</textarea>
         </div>
 
         <!-- Spacer -->
@@ -680,48 +680,48 @@
         <div class="flex flex-col gap-[4px]">
           <!-- Priority -->
           <div class="flex items-center py-[10px]">
-            <span class="text-body-small text-[#545f70] w-[104px] flex-shrink-0">Priority</span>
-            <div id="dialogPriority" class="flex items-center gap-[6px] text-body-small text-[#1f2533]">
-              <svg class="w-[18px] h-[18px] text-[#545f70]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" transform="rotate(90 12 12)"/></svg>
+            <span class="text-body-small text-[#7a7674] w-[104px] flex-shrink-0">Priority</span>
+            <div id="dialogPriority" class="flex items-center gap-[6px] text-body-small text-[#1c1714]">
+              <svg class="w-[18px] h-[18px] text-[#7a7674]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" transform="rotate(90 12 12)"/></svg>
               <span>Low</span>
             </div>
           </div>
           <!-- Due date -->
           <div class="flex items-center py-[10px]">
-            <span class="text-body-small text-[#545f70] w-[104px] flex-shrink-0">Due date</span>
-            <div id="dialogDueDate" class="flex items-center gap-[6px] text-body-small text-[#1f2533]">
-              <svg class="w-[18px] h-[18px] text-[#545f70]" viewBox="0 0 24 24" fill="currentColor"><path d="M8 2C8.55228 2 9 2.44772 9 3V4H15V3C15 2.44772 15.4477 2 16 2C16.5523 2 17 2.44772 17 3V4H19C20.1046 4 21 4.89543 21 6V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20V6C3 4.89543 3.89543 4 5 4H7V3C7 2.44772 7.44772 2 8 2ZM5 10V20H19V10H5Z"/></svg>
+            <span class="text-body-small text-[#7a7674] w-[104px] flex-shrink-0">Due date</span>
+            <div id="dialogDueDate" class="flex items-center gap-[6px] text-body-small text-[#1c1714]">
+              <svg class="w-[18px] h-[18px] text-[#7a7674]" viewBox="0 0 24 24" fill="currentColor"><path d="M8 2C8.55228 2 9 2.44772 9 3V4H15V3C15 2.44772 15.4477 2 16 2C16.5523 2 17 2.44772 17 3V4H19C20.1046 4 21 4.89543 21 6V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20V6C3 4.89543 3.89543 4 5 4H7V3C7 2.44772 7.44772 2 8 2ZM5 10V20H19V10H5Z"/></svg>
               <span>22 Jul 2024 9:41am</span>
             </div>
           </div>
           <!-- Assignee -->
           <div class="flex items-center py-[10px]">
-            <span class="text-body-small text-[#545f70] w-[104px] flex-shrink-0">Assignee</span>
-            <div class="flex items-center gap-[6px] text-body-small text-[#1f2533]">
-              <svg class="w-[18px] h-[18px] text-[#545f70]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span class="text-body-small text-[#7a7674] w-[104px] flex-shrink-0">Assignee</span>
+            <div class="flex items-center gap-[6px] text-body-small text-[#1c1714]">
+              <svg class="w-[18px] h-[18px] text-[#7a7674]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
               <span>Edward Deming</span>
             </div>
           </div>
           <!-- Site -->
           <div class="flex items-center py-[10px]">
-            <span class="text-body-small text-[#545f70] w-[104px] flex-shrink-0">Site</span>
-            <div class="flex items-center gap-[6px] text-body-small text-[#bfc6d4]">
+            <span class="text-body-small text-[#7a7674] w-[104px] flex-shrink-0">Site</span>
+            <div class="flex items-center gap-[6px] text-body-small text-[#d9d6d6]">
               <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="18" rx="1"/><rect x="14" y="3" width="7" height="8" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
               <span>Add site</span>
             </div>
           </div>
           <!-- Asset -->
           <div class="flex items-center py-[10px]">
-            <span class="text-body-small text-[#545f70] w-[104px] flex-shrink-0">Asset</span>
-            <div class="flex items-center gap-[6px] text-body-small text-[#bfc6d4]">
+            <span class="text-body-small text-[#7a7674] w-[104px] flex-shrink-0">Asset</span>
+            <div class="flex items-center gap-[6px] text-body-small text-[#d9d6d6]">
               <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
               <span>Add asset</span>
             </div>
           </div>
           <!-- Label -->
           <div class="flex items-center py-[10px]">
-            <span class="text-body-small text-[#545f70] w-[104px] flex-shrink-0">Label</span>
-            <div class="flex items-center gap-[6px] text-body-small text-[#bfc6d4]">
+            <span class="text-body-small text-[#7a7674] w-[104px] flex-shrink-0">Label</span>
+            <div class="flex items-center gap-[6px] text-body-small text-[#d9d6d6]">
               <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
               <span>Add label</span>
             </div>
@@ -729,27 +729,27 @@
         </div>
 
         <!-- Divider -->
-        <div class="border-t border-[#DBE0EB] my-[16px]"></div>
+        <div class="border-t border-[#e5e5e5] my-[16px]"></div>
 
         <!-- Source inspection -->
         <div class="flex items-center gap-[8px] py-[8px] mb-[8px]">
-          <svg class="w-[18px] h-[18px] text-[#545f70]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-          <span class="text-body-small text-[#4740D4]">Source inspection</span>
+          <svg class="w-[18px] h-[18px] text-[#7a7674]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          <span class="text-body-small text-[#4a42c8]">Source inspection</span>
         </div>
 
         <!-- Custom fields -->
         <div class="flex items-center justify-between py-[8px] cursor-pointer">
-          <span class="text-body-small text-[#1f2533] font-medium">Custom fields</span>
-          <svg class="w-[16px] h-[16px] text-[#545f70]" viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+          <span class="text-body-small text-[#1c1714] font-medium">Custom fields</span>
+          <svg class="w-[16px] h-[16px] text-[#7a7674]" viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
         </div>
 
         <!-- Divider -->
-        <div class="border-t border-[#DBE0EB] my-[12px]"></div>
+        <div class="border-t border-[#e5e5e5] my-[12px]"></div>
 
         <!-- Footer info -->
         <div class="flex flex-col gap-[4px]">
-          <p class="text-body-xsmall text-[#828ea0]">Created by Sabrina Spellman</p>
-          <p class="text-body-xsmall text-[#828ea0]">Visible to the creator and the assignee</p>
+          <p class="text-body-xsmall text-[#7a7674]">Created by Sabrina Spellman</p>
+          <p class="text-body-xsmall text-[#7a7674]">Visible to the creator and the assignee</p>
         </div>
       </div>
     </div>
@@ -775,10 +775,10 @@
 
       // Map status to colors
       const statusColors = {
-        'To Do': { bg: '#FFFAE5', color: '#BD5800' },
-        'In progress': { bg: '#FFF1CC', color: '#9E4A00' },
-        'Overdue': { bg: '#FFEBE6', color: '#A8242A' },
-        'Upcoming': { bg: '#F1F3FB', color: '#545f70' }
+        'To Do': { bg: '#e9e7e7', color: '#7a7674' },
+        'In progress': { bg: '#feeac6', color: '#643804' },
+        'Overdue': { bg: '#f9d8d0', color: '#b02010' },
+        'Upcoming': { bg: '#ecedfe', color: '#7a7674' }
       };
       const colors = statusColors[statusText] || statusColors['To Do'];
       statusEl.style.background = colors.bg;
@@ -793,16 +793,16 @@
       const dialogPriority = document.getElementById('dialogPriority');
       if (priorityEl) {
         const prioText = priorityEl.querySelector('span').textContent;
-        const prioColor = priorityEl.classList.contains('text-[#A8242A]') ? '#A8242A' :
-                          priorityEl.querySelector('span').parentElement.classList.toString().includes('A8242A') ? '#A8242A' :
-                          prioText === 'High' ? '#A8242A' : prioText === 'Medium' ? '#BD5800' : '#545f70';
+        const prioColor = priorityEl.classList.contains('text-[#b02010]') ? '#b02010' :
+                          priorityEl.querySelector('span').parentElement.classList.toString().includes('A8242A') ? '#b02010' :
+                          prioText === 'High' ? '#b02010' : prioText === 'Medium' ? '#a86010' : '#7a7674';
         dialogPriority.innerHTML = `
           <svg class="w-[18px] h-[18px]" style="color:${prioColor}" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" transform="rotate(${prioText === 'Low' ? 90 : -90} 12 12)"/></svg>
           <span>${prioText}</span>`;
       } else {
         dialogPriority.innerHTML = `
-          <svg class="w-[18px] h-[18px] text-[#545f70]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
-          <span class="text-[#bfc6d4]">None</span>`;
+          <svg class="w-[18px] h-[18px] text-[#7a7674]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          <span class="text-[#d9d6d6]">None</span>`;
       }
 
       // Get date
